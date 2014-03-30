@@ -15,8 +15,8 @@ SET search_path = public, pg_catalog;
 -- Data for Name: account; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO account VALUES (1, 'AdminCat', 'admin@freewheelers.com', 'admin', '', true);
-INSERT INTO account VALUES (2, 'UserCat', 'user@freewheelers.com', 'user', '', true);
+--INSERT INTO account VALUES (1, 'AdminCat', 'admin@freewheelers.com', 'admin', '', true);
+--INSERT INTO account VALUES (2, 'UserCat', 'user@freewheelers.com', 'user', '', true);
 INSERT INTO account VALUES (6, 'Michael Stipe', 'mstipe@freewheelers.com', 'REMisAwesome', '1234567890', true);
 INSERT INTO account VALUES (8, 'Peter Buck', 'peter-buck@gmx.de', 'P3t3r', '1234567890', true);
 INSERT INTO account VALUES (7, 'Scott McCaughey', 'smccaughey@gmail.com', 'ScottScottScott', '1234567890', true);
@@ -34,8 +34,8 @@ SELECT pg_catalog.setval('account_account_id_seq', 9, true);
 -- Data for Name: account_role; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO account_role VALUES (1, 'AdminCat', 'ROLE_ADMIN');
-INSERT INTO account_role VALUES (2, 'UserCat', 'ROLE_USER');
+--INSERT INTO account_role VALUES (1, 'AdminCat', 'ROLE_ADMIN');
+--INSERT INTO account_role VALUES (2, 'UserCat', 'ROLE_USER');
 INSERT INTO account_role VALUES (4, 'Michael Stipe', 'ROLE_USER');
 INSERT INTO account_role VALUES (5, 'Scott McCaughey', 'ROLE_USER');
 INSERT INTO account_role VALUES (6, 'Peter Buck', 'ROLE_USER');

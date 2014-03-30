@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/lib/main
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -607,40 +607,6 @@ has-props
 
 51761
 
-hamcrest-core-1.3.jar
-file
-
-
-
-
-2014-03-19T10:04:55.000000Z
-6393363b47ddcbba82321110c3e07519
-2013-05-29T04:29:25.052835Z
-249
-nningego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-45024
-
 validation-api-1.0.0.GA-jar.jar
 file
 
@@ -675,18 +641,17 @@ has-props
 
 47433
 
-jetty-server-8.1.9.v20130131.jar
+hamcrest-core-1.3.jar
 file
 
 
 
 
 2014-03-19T10:04:55.000000Z
-4435dd6e7ae07ad44dd8c75bee3b3861
-2013-02-08T04:52:45.488100Z
-122
-mhofer
-has-props
+6393363b47ddcbba82321110c3e07519
+2013-05-29T04:29:25.052835Z
+249
+nningego
 
 
 
@@ -707,7 +672,8 @@ has-props
 
 
 
-347872
+
+45024
 
 spring-security-acl-3.1.3.RELEASE-jar.jar
 file
@@ -743,17 +709,18 @@ has-props
 
 79531
 
-hibernate-core-3.5.6-Final-jar.jar
+jetty-server-8.1.9.v20130131.jar
 file
 
 
 
 
 2014-03-19T10:04:55.000000Z
-10249177261810a3ba8f3b9a468d06e0
-2013-06-03T06:26:07.183762Z
-273
-ddornell
+4435dd6e7ae07ad44dd8c75bee3b3861
+2013-02-08T04:52:45.488100Z
+122
+mhofer
+has-props
 
 
 
@@ -774,8 +741,7 @@ ddornell
 
 
 
-
-2566731
+347872
 
 javax.el-2.2.0.v201108011116.jar
 file
@@ -811,6 +777,40 @@ has-props
 
 51114
 
+hibernate-core-3.5.6-Final-jar.jar
+file
+
+
+
+
+2014-03-19T10:04:55.000000Z
+10249177261810a3ba8f3b9a468d06e0
+2013-06-03T06:26:07.183762Z
+273
+ddornell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2566731
+
 xmlunit-1.4.jar
 file
 
@@ -844,40 +844,6 @@ nningego
 
 
 98970
-
-jetty-continuation-8.1.9.v20130131.jar
-file
-
-
-
-
-2014-03-19T10:04:55.000000Z
-f91ea9052f7dba40a8f53dadc5b411e5
-2013-02-08T04:52:45.488100Z
-122
-mhofer
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-21146
 
 persistence-api-1.0-jar.jar
 file
@@ -913,6 +879,40 @@ has-props
 
 52150
 
+jetty-continuation-8.1.9.v20130131.jar
+file
+
+
+
+
+2014-03-19T10:04:55.000000Z
+f91ea9052f7dba40a8f53dadc5b411e5
+2013-02-08T04:52:45.488100Z
+122
+mhofer
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21146
+
 antlr-2.7.6-jar.jar
 file
 
@@ -947,40 +947,6 @@ has-props
 
 443432
 
-log4j-1.2.17.jar
-file
-
-
-
-
-2014-03-19T10:04:55.000000Z
-fb87bd84e336ca3dc6b6c108f51bf25e
-2013-07-14T06:33:25.124877Z
-278
-dhammer
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-489883
-
 spring-security-config-3.1.3.RELEASE-jar.jar
 file
 
@@ -1014,6 +980,40 @@ has-props
 
 
 203704
+
+log4j-1.2.17.jar
+file
+
+
+
+
+2014-03-19T10:04:55.000000Z
+fb87bd84e336ca3dc6b6c108f51bf25e
+2013-07-14T06:33:25.124877Z
+278
+dhammer
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+489883
 
 commons-logging-1.1.1-jar.jar
 file

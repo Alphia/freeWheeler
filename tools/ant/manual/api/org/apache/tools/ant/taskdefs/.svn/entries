@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/taskdefs
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -675,40 +675,6 @@ mhofer
 
 20772
 
-MakeUrl.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-3f2c95eba7d34e9a1f308a6282e4253f
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-22773
-
 Typedef.html
 file
 
@@ -742,6 +708,40 @@ mhofer
 
 
 21152
+
+MakeUrl.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+3f2c95eba7d34e9a1f308a6282e4253f
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22773
 
 XSLTProcess.Factory.Attribute.html
 file
@@ -845,14 +845,14 @@ mhofer
 
 22105
 
-Concat.TextElement.html
+MacroDef.TemplateElement.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-c490c44153f7a48a15d43ef60e91e0e0
+93001944f140a22ade5a80734be8f2c0
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -877,7 +877,7 @@ mhofer
 
 
 
-15995
+15590
 
 Length.FileMode.html
 file
@@ -913,14 +913,14 @@ mhofer
 
 11488
 
-MacroDef.TemplateElement.html
+Concat.TextElement.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-93001944f140a22ade5a80734be8f2c0
+c490c44153f7a48a15d43ef60e91e0e0
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -945,7 +945,7 @@ mhofer
 
 
 
-15590
+15995
 
 Javadoc.AccessType.html
 file
@@ -2072,40 +2072,6 @@ mhofer
 
 11229
 
-CallTarget.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-6eb195c8313ea9cd7c6bec76f5cbb8e9
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-29575
-
 MacroDef.Attribute.html
 file
 
@@ -2139,6 +2105,40 @@ mhofer
 
 
 15923
+
+CallTarget.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+6eb195c8313ea9cd7c6bec76f5cbb8e9
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+29575
 
 Echo.EchoLevel.html
 file
@@ -2208,40 +2208,6 @@ mhofer
 
 8754
 
-LoadResource.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-f83d58a23c11fbc8f15a20c5f41d77b6
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-20483
-
 Rmic.ImplementationSpecificArgument.html
 file
 
@@ -2275,6 +2241,40 @@ mhofer
 
 
 14780
+
+LoadResource.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+f83d58a23c11fbc8f15a20c5f41d77b6
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20483
 
 Jar.StrictMode.html
 file
@@ -2310,14 +2310,14 @@ mhofer
 
 12731
 
-ExecuteOn.FileDirBoth.html
+XSLTProcess.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-ea4e347c7b4cec7f48c3fdda267984fd
+6e1bca3e4f7e4934457ef61cd89aab8e
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -2342,7 +2342,7 @@ mhofer
 
 
 
-13653
+69177
 
 Parallel.TaskList.html
 file
@@ -2378,14 +2378,14 @@ mhofer
 
 9824
 
-XSLTProcess.html
+ExecuteOn.FileDirBoth.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-6e1bca3e4f7e4934457ef61cd89aab8e
+ea4e347c7b4cec7f48c3fdda267984fd
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -2410,7 +2410,7 @@ mhofer
 
 
 
-69177
+13653
 
 DiagnosticsTask.html
 file
@@ -2514,40 +2514,6 @@ mhofer
 
 11721
 
-CloseResources.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-57dc5c98fc6200a6d658d9ca218776e9
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-16088
-
 Tar.TarLongFileMode.html
 file
 
@@ -2581,6 +2547,40 @@ mhofer
 
 
 18572
+
+CloseResources.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+57dc5c98fc6200a6d658d9ca218776e9
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16088
 
 SendEmail.html
 file
@@ -2616,40 +2616,6 @@ mhofer
 
 21855
 
-Checksum.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-97c85c216cf889723654c4c8232fa5a1
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-37948
-
 Execute.html
 file
 
@@ -2683,6 +2649,40 @@ mhofer
 
 
 36594
+
+Checksum.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+97c85c216cf889723654c4c8232fa5a1
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+37948
 
 ExecuteJava.html
 file
@@ -2752,14 +2752,14 @@ mhofer
 
 13140
 
-Manifest.html
+AntStructure.StructurePrinter.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-2eed8713baeae648783304116acf35ba
+5d233fc9916614ccd843bfa7329135d2
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -2784,7 +2784,7 @@ mhofer
 
 
 
-38892
+12169
 
 BindTargets.html
 file
@@ -2820,14 +2820,14 @@ mhofer
 
 18057
 
-AntStructure.StructurePrinter.html
+Manifest.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-5d233fc9916614ccd843bfa7329135d2
+2eed8713baeae648783304116acf35ba
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -2852,41 +2852,7 @@ mhofer
 
 
 
-12169
-
-FixCRLF.OneLiner.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-5bb38f30f99da4fdc93dba144ccbb000
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14893
+38892
 
 Concat.html
 file
@@ -2922,6 +2888,40 @@ mhofer
 
 40230
 
+FixCRLF.OneLiner.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+5bb38f30f99da4fdc93dba144ccbb000
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14893
+
 BuildNumber.html
 file
 
@@ -2955,40 +2955,6 @@ mhofer
 
 
 16012
-
-Antlib.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-12a64ac63a4a97413928ef78535eee5c
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-20648
 
 Exit.html
 file
@@ -3024,14 +2990,14 @@ mhofer
 
 22487
 
-EchoXML.NamespacePolicy.html
+Antlib.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-7a1e2c55ca175071af3ce6e0ef0cb97c
+12a64ac63a4a97413928ef78535eee5c
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -3056,7 +3022,7 @@ mhofer
 
 
 
-14151
+20648
 
 WhichResource.html
 file
@@ -3092,14 +3058,14 @@ mhofer
 
 20333
 
-Input.Handler.html
+EchoXML.NamespacePolicy.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-715ad3ca93b11e769612fc139133f5b4
+7a1e2c55ca175071af3ce6e0ef0cb97c
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -3124,7 +3090,7 @@ mhofer
 
 
 
-21698
+14151
 
 Zip.Duplicate.html
 file
@@ -3160,14 +3126,14 @@ mhofer
 
 11720
 
-ManifestTask.Mode.html
+Input.Handler.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-e652b99da9010471734db2f3f8624e7b
+715ad3ca93b11e769612fc139133f5b4
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -3192,7 +3158,41 @@ mhofer
 
 
 
-11576
+21698
+
+Sync.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+49542226672fe2f3e5ccf6cdf188a292
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25958
 
 Jar.html
 file
@@ -3228,14 +3228,14 @@ mhofer
 
 66149
 
-Sync.html
+ManifestTask.Mode.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-49542226672fe2f3e5ccf6cdf188a292
+e652b99da9010471734db2f3f8624e7b
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -3260,7 +3260,7 @@ mhofer
 
 
 
-25958
+11576
 
 MacroDef.html
 file
@@ -3432,40 +3432,6 @@ mhofer
 
 23010
 
-ManifestTask.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-07b774fca04daef4a78420401d99277b
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-25107
-
 SQLExec.OnError.html
 file
 
@@ -3500,14 +3466,14 @@ mhofer
 
 11817
 
-MacroDef.NestedSequential.html
+ManifestTask.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-d3f3b1a86c6cf1331d24ad2e0d98f933
+07b774fca04daef4a78420401d99277b
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -3532,7 +3498,7 @@ mhofer
 
 
 
-11787
+25107
 
 Parallel.html
 file
@@ -3568,14 +3534,14 @@ mhofer
 
 23962
 
-TaskOutputStream.html
+MacroDef.NestedSequential.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-b05c933bd1feb09ac10a5bfbb39f8a2b
+d3f3b1a86c6cf1331d24ad2e0d98f933
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -3600,7 +3566,7 @@ mhofer
 
 
 
-8980
+11787
 
 XSLTProcess.Factory.html
 file
@@ -3636,14 +3602,14 @@ mhofer
 
 12333
 
-MacroDef.Text.html
+TaskOutputStream.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-68ab9b2d481ac14143bdb93b17d53f27
+b05c933bd1feb09ac10a5bfbb39f8a2b
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -3668,7 +3634,7 @@ mhofer
 
 
 
-15653
+8980
 
 GenerateKey.html
 file
@@ -3703,6 +3669,40 @@ mhofer
 
 
 32172
+
+MacroDef.Text.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+68ab9b2d481ac14143bdb93b17d53f27
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15653
 
 SQLExec.html
 file
@@ -4078,40 +4078,6 @@ mhofer
 
 13688
 
-Javac.html
-file
-
-
-
-
-2014-03-19T10:02:27.000000Z
-a5f50782cb00d4bcfde2f46951ea3158
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-91383
-
 StreamPumper.html
 file
 
@@ -4146,14 +4112,14 @@ mhofer
 
 16044
 
-Truncate.html
+Javac.html
 file
 
 
 
 
 2014-03-19T10:02:27.000000Z
-b7e4b554eb52e7ca6c6d829f69918926
+a5f50782cb00d4bcfde2f46951ea3158
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -4178,7 +4144,7 @@ mhofer
 
 
 
-19706
+91383
 
 JDBCTask.html
 file
@@ -4213,6 +4179,40 @@ mhofer
 
 
 34798
+
+Truncate.html
+file
+
+
+
+
+2014-03-19T10:02:27.000000Z
+b7e4b554eb52e7ca6c6d829f69918926
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19706
 
 BZip2.html
 file

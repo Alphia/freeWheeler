@@ -95,9 +95,11 @@ table th {
 }
 
 table {
+    width: 90%;
     border-spacing: 8px;
     border-collapse: separate;
 }
+
 
 .reserve-button {
     width: 120px;
@@ -110,6 +112,10 @@ table {
     display: inline-block;
     border-radius: 5px;
 }
+.caution {
+    color: red;
+    visibility: hidden;
+}
 
 .text-error {
     color: indianred;
@@ -120,6 +126,10 @@ table {
     font-size: 17px;
 
 }
+.total {
+    text-align: right;
+    }
+
 
 .mandatory {
     color: indianred;

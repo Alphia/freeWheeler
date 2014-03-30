@@ -8,8 +8,8 @@ import java.util.List;
 public interface ReserveOrderMapper {
 
     @Insert(
-        "INSERT INTO reserve_order (account_id, item_id, status, note, reservation_timestamp) " +
-        "VALUES (#{account_id}, #{item_id}, #{status}, #{note}, #{reservation_timestamp})"
+        "INSERT INTO reserve_order (account_id, item_id, status, note, reservation_timestamp,quantity) " +
+        "VALUES (#{account_id}, #{item_id}, #{status}, #{note}, #{reservation_timestamp},#{quantity})"
     )
     @Options(keyProperty = "order_id", useGeneratedKeys = true)
     Integer insert(ReserveOrder order);

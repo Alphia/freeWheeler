@@ -5,7 +5,7 @@ import com.trailblazers.freewheelers.model.Account;
 import com.trailblazers.freewheelers.model.NpsReport;
 import com.trailblazers.freewheelers.model.SurveyComments;
 import com.trailblazers.freewheelers.service.SurveyService;
-import com.trailblazers.freewheelers.service.impl.AccountService;
+import com.trailblazers.freewheelers.service.AccountService;
 import com.trailblazers.freewheelers.web.forms.SurveyEntryForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

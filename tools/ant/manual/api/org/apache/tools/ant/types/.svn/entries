@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/types
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -230,6 +230,9 @@ mhofer
 
 12002
 
+spi
+dir
+
 Assertions.DisabledAssertion.html
 file
 
@@ -263,9 +266,6 @@ mhofer
 
 
 10802
-
-spi
-dir
 
 PatternSet.html
 file
@@ -301,40 +301,6 @@ mhofer
 
 33305
 
-FileSet.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-78acea9ac09f5b9854e571cf1104b308
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-29342
-
 Assertions.BaseAssertion.html
 file
 
@@ -368,6 +334,40 @@ mhofer
 
 
 13288
+
+FileSet.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+78acea9ac09f5b9854e571cf1104b308
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+29342
 
 Path.PathElement.html
 file
@@ -1052,40 +1052,6 @@ mhofer
 
 36633
 
-CommandlineJava.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-d3da5bad130b10384e63ae546312e172
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-41235
-
 package-tree.html
 file
 
@@ -1119,6 +1085,40 @@ mhofer
 
 
 20317
+
+CommandlineJava.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+d3da5bad130b10384e63ae546312e172
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+41235
 
 DirSet.html
 file
@@ -1154,40 +1154,6 @@ mhofer
 
 29455
 
-XMLCatalog.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-b3b6f3b93e981ab9fc69789eae806764
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-39073
-
 ArchiveScanner.html
 file
 
@@ -1221,6 +1187,40 @@ mhofer
 
 
 34603
+
+XMLCatalog.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+b3b6f3b93e981ab9fc69789eae806764
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+39073
 
 ArchiveFileSet.html
 file
@@ -1256,6 +1256,9 @@ mhofer
 
 64195
 
+selectors
+dir
+
 TarScanner.html
 file
 
@@ -1289,9 +1292,6 @@ mhofer
 
 
 21809
-
-selectors
-dir
 
 FilterSet.html
 file
@@ -1361,6 +1361,9 @@ mhofer
 
 44197
 
+mappers
+dir
+
 Environment.html
 file
 
@@ -1395,8 +1398,39 @@ mhofer
 
 13624
 
-mappers
-dir
+Commandline.Argument.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+17cc16f45e5911c221831ea0729f7268
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17979
 
 Parameterizable.html
 file
@@ -1431,40 +1465,6 @@ mhofer
 
 
 11079
-
-Commandline.Argument.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-17cc16f45e5911c221831ea0729f7268
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-17979
 
 Comparison.html
 file
@@ -1602,40 +1602,6 @@ mhofer
 
 35452
 
-ResourceFactory.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-2f78d6a49fb42432030f99beb0fcfc49
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9233
-
 AbstractFileSet.html
 file
 
@@ -1669,6 +1635,40 @@ mhofer
 
 
 92927
+
+ResourceFactory.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+2f78d6a49fb42432030f99beb0fcfc49
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9233
 
 PropertySet.PropertyRef.html
 file
@@ -1840,40 +1840,6 @@ mhofer
 
 44505
 
-Environment.Variable.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-42056d162003ffa71c8146e29acb74ee
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14428
-
 FilterChain.html
 file
 
@@ -1907,6 +1873,40 @@ mhofer
 
 
 44779
+
+Environment.Variable.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+42056d162003ffa71c8146e29acb74ee
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14428
 
 TimeComparison.html
 file
@@ -1942,40 +1942,6 @@ mhofer
 
 18979
 
-FileList.FileName.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-3e44dafb3897b6af88927d4b9e33301f
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9387
-
 PatternSet.NameEntry.html
 file
 
@@ -2009,6 +1975,40 @@ mhofer
 
 
 15366
+
+FileList.FileName.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+3e44dafb3897b6af88927d4b9e33301f
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9387
 
 Path.html
 file

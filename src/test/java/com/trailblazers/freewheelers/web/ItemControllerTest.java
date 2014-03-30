@@ -3,7 +3,7 @@ package com.trailblazers.freewheelers.web;
 import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ItemType;
 import com.trailblazers.freewheelers.service.ServiceResult;
-import com.trailblazers.freewheelers.service.impl.ItemService;
+import com.trailblazers.freewheelers.service.ItemService;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Before;
 import org.junit.Test;

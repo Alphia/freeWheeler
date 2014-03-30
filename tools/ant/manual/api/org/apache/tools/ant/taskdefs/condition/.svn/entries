@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/taskdefs/condition
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -808,40 +808,6 @@ mhofer
 
 4700
 
-IsFalse.html
-file
-
-
-
-
-2014-03-19T10:02:16.000000Z
-d09362f3e9b0ff018443b754efbb8728
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-13355
-
 package-summary.html
 file
 
@@ -876,14 +842,14 @@ mhofer
 
 14813
 
-ResourcesMatch.html
+IsFalse.html
 file
 
 
 
 
 2014-03-19T10:02:16.000000Z
-def50f1be897e1e2bd046b3bf85ac1fd
+d09362f3e9b0ff018443b754efbb8728
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -908,41 +874,7 @@ mhofer
 
 
 
-11936
-
-ResourceExists.html
-file
-
-
-
-
-2014-03-19T10:02:16.000000Z
-1e3a7a2295dd35ff96600c8b9a538b74
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14427
+13355
 
 IsSet.html
 file
@@ -978,14 +910,14 @@ mhofer
 
 13300
 
-Socket.html
+ResourceExists.html
 file
 
 
 
 
 2014-03-19T10:02:16.000000Z
-817729548a35abe4928cf8d91e550137
+1e3a7a2295dd35ff96600c8b9a538b74
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -1010,7 +942,41 @@ mhofer
 
 
 
-14048
+14427
+
+ResourcesMatch.html
+file
+
+
+
+
+2014-03-19T10:02:16.000000Z
+def50f1be897e1e2bd046b3bf85ac1fd
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11936
 
 AntVersion.html
 file
@@ -1045,6 +1011,40 @@ mhofer
 
 
 21204
+
+Socket.html
+file
+
+
+
+
+2014-03-19T10:02:16.000000Z
+817729548a35abe4928cf8d91e550137
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14048
 
 HasFreeSpace.html
 file

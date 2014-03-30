@@ -1,6 +1,6 @@
 package com.trailblazers.freewheelers.model;
 
-import com.trailblazers.freewheelers.service.impl.CountryService;
+import com.trailblazers.freewheelers.service.CountryService;
 import org.junit.Before;
 import org.junit.Test;
 

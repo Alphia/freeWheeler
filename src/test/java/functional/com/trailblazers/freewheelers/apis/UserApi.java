@@ -141,6 +141,21 @@ public class UserApi {
         return this;
     }
 
+    public UserApi addsToshoppingCart(String name) {
+        driver.findElement(HomeTable.reserveButtonFor(name)).click();
+        return this;
+    }
+    public UserApi checksOut(){
+        driver.findElement(By.name("shoppingCart")).click();
+        return this;
+
+    }
+    public UserApi Buys(){
+        driver.findElement(By.name("shoppingCart")).click();
+        return this;
+
+    }
+
     public UserApi reserves_item(String name) {
         driver.findElement(HomeTable.reserveButtonFor(name)).click();
         return this;

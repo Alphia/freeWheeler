@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/types/selectors
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -403,40 +403,6 @@ mhofer
 
 26169
 
-DependSelector.html
-file
-
-
-
-
-2014-03-19T10:02:13.000000Z
-a836c2fb2778258922364824b9a848a9
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-21092
-
 SizeSelector.ByteUnits.html
 file
 
@@ -539,6 +505,40 @@ mhofer
 
 25098
 
+DependSelector.html
+file
+
+
+
+
+2014-03-19T10:02:13.000000Z
+a836c2fb2778258922364824b9a848a9
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21092
+
 SelectorUtils.html
 file
 
@@ -572,40 +572,6 @@ mhofer
 
 
 30485
-
-SizeSelector.SizeComparisons.html
-file
-
-
-
-
-2014-03-19T10:02:13.000000Z
-c898c60b31bce413d9738f6abe9b64ba
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-12159
 
 TypeSelector.FileType.html
 file
@@ -641,14 +607,14 @@ mhofer
 
 13989
 
-AbstractSelectorContainer.html
+SizeSelector.SizeComparisons.html
 file
 
 
 
 
 2014-03-19T10:02:13.000000Z
-75a5f1daa7ad1cf1b3163dfc2d4b2a5d
+c898c60b31bce413d9738f6abe9b64ba
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -673,7 +639,7 @@ mhofer
 
 
 
-58612
+12159
 
 DifferentSelector.html
 file
@@ -708,6 +674,40 @@ mhofer
 
 
 22382
+
+AbstractSelectorContainer.html
+file
+
+
+
+
+2014-03-19T10:02:13.000000Z
+75a5f1daa7ad1cf1b3163dfc2d4b2a5d
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+58612
 
 WritableSelector.html
 file
@@ -879,40 +879,6 @@ mhofer
 
 38908
 
-PresentSelector.html
-file
-
-
-
-
-2014-03-19T10:02:13.000000Z
-a5cc22a3cb7dca8e0f114f24d0969d85
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-26549
-
 FilenameSelector.html
 file
 
@@ -946,6 +912,40 @@ mhofer
 
 
 31092
+
+PresentSelector.html
+file
+
+
+
+
+2014-03-19T10:02:13.000000Z
+a5cc22a3cb7dca8e0f114f24d0969d85
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26549
 
 TypeSelector.html
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/Types
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -196,40 +196,6 @@ mhofer
 
 34104
 
-filterchain.html
-file
-
-
-
-
-2014-03-19T10:02:07.000000Z
-50dd4ca934c8953afdb05ac3ea7346e9
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-53543
-
 extensionset.html
 file
 
@@ -263,6 +229,40 @@ mhofer
 
 
 2922
+
+filterchain.html
+file
+
+
+
+
+2014-03-19T10:02:07.000000Z
+50dd4ca934c8953afdb05ac3ea7346e9
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+53543
 
 patternset.html
 file
@@ -298,14 +298,14 @@ mhofer
 
 7643
 
-dirset.html
+regexp.html
 file
 
 
 
 
 2014-03-19T10:02:07.000000Z
-83f34acdeaff4188627193ed09c37568
+de98795b3896c474f0d453a4c959c088
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -330,41 +330,7 @@ mhofer
 
 
 
-5838
-
-custom-programming.html
-file
-
-
-
-
-2014-03-19T10:02:07.000000Z
-b59df49b7481d5a4d1b2cf4d3cab39d9
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14174
+4545
 
 assertions.html
 file
@@ -400,14 +366,14 @@ mhofer
 
 6620
 
-regexp.html
+custom-programming.html
 file
 
 
 
 
 2014-03-19T10:02:07.000000Z
-de98795b3896c474f0d453a4c959c088
+b59df49b7481d5a4d1b2cf4d3cab39d9
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -432,16 +398,16 @@ mhofer
 
 
 
-4545
+14174
 
-fileset.html
+dirset.html
 file
 
 
 
 
 2014-03-19T10:02:07.000000Z
-9e52b0f2c924dcc97887422020317235
+83f34acdeaff4188627193ed09c37568
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -466,7 +432,7 @@ mhofer
 
 
 
-6970
+5838
 
 xmlcatalog.html
 file
@@ -501,6 +467,40 @@ mhofer
 
 
 13379
+
+fileset.html
+file
+
+
+
+
+2014-03-19T10:02:07.000000Z
+9e52b0f2c924dcc97887422020317235
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6970
 
 namespace.html
 file

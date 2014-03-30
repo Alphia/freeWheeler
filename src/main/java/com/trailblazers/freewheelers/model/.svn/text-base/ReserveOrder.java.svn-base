@@ -13,6 +13,7 @@ public class ReserveOrder {
     private Date reservation_timestamp;
     private OrderStatus status = OrderStatus.NEW;
     private String note = "";
+    private int quantity;
 
     public ReserveOrder(){}
 
@@ -20,6 +21,14 @@ public class ReserveOrder {
         this.account_id = account_id;
         this.item_id = item_id;
         this.reservation_timestamp = rightNow;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public Long getItem_id() {

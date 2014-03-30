@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/repo/twu36proj3/!svn/ver/387/trunk/src/test/java/com/trailblazers/freewheelers/model
+/repo/twu36proj3/!svn/ver/396/trunk/src/test/java/com/trailblazers/freewheelers/model
 END
 CountryTest.java
 K 25
@@ -25,5 +25,5 @@ AccountTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 102
-/repo/twu36proj3/!svn/ver/387/trunk/src/test/java/com/trailblazers/freewheelers/model/AccountTest.java
+/repo/twu36proj3/!svn/ver/396/trunk/src/test/java/com/trailblazers/freewheelers/model/AccountTest.java
 END

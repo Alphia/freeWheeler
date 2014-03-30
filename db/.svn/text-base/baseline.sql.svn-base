@@ -4,6 +4,15 @@ CREATE TABLE country
       country_name character varying(255) NOT NULL
 );
 
+CREATE TABLE shopping_cart
+(
+    shopping_id SERIAL PRIMARY KEY,
+    item_id bigint,
+    account_id bigint,
+    quantity int
+
+);
+
 CREATE TABLE item
 (
        item_id SERIAL PRIMARY KEY,
@@ -46,7 +55,8 @@ CREATE TABLE reserve_order
         item_id bigint NOT NULL,
 	status character varying(255) NOT NULL,
 	note character varying(255) NOT NULL,
-        reservation_timestamp timestamp without time zone NOT NULL
+        reservation_timestamp timestamp without time zone NOT NULL,
+        quantity int
 );
 
 CREATE TABLE survey_entry

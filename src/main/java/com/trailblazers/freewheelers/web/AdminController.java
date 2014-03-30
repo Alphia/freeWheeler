@@ -1,9 +1,9 @@
 package com.trailblazers.freewheelers.web;
 
 import com.trailblazers.freewheelers.model.*;
-import com.trailblazers.freewheelers.service.impl.AccountService;
-import com.trailblazers.freewheelers.service.impl.ItemService;
-import com.trailblazers.freewheelers.service.impl.ReserveOrderService;
+import com.trailblazers.freewheelers.service.AccountService;
+import com.trailblazers.freewheelers.service.ItemService;
+import com.trailblazers.freewheelers.service.ReserveOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

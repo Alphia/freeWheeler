@@ -3,16 +3,15 @@ package com.trailblazers.freewheelers.web;
 import com.trailblazers.freewheelers.model.Account;
 import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ReserveOrder;
-import com.trailblazers.freewheelers.service.impl.AccountService;
-import com.trailblazers.freewheelers.service.impl.ItemService;
-import com.trailblazers.freewheelers.service.impl.ReserveOrderService;
+import com.trailblazers.freewheelers.model.ShoppingCartItem;
+import com.trailblazers.freewheelers.service.AccountService;
+import com.trailblazers.freewheelers.service.ReserveOrderService;
+import com.trailblazers.freewheelers.service.ItemService;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;
-
 import java.security.Principal;
 import java.util.Date;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
@@ -29,6 +28,7 @@ public class ReserveControllerTest {
     private ReserveOrderService reserveOrderService;
     private ReserveOrder reserveOrder;
     private ReserveController reserveController;
+    private ShoppingCartItem shoppingItem;
     private Account account;
 
     @Before
@@ -41,28 +41,68 @@ public class ReserveControllerTest {
         account = new Account();
         account.setAccount_id(1L);
         this.item = new Item();
+        this.mockItemService = mock(ItemService.class);
+        this.mockAccountService = mock(AccountService.class);
+        this.reserveOrderService = mock(ReserveOrderService.class);
+        this.reserveOrder = new ReserveOrder();
+        this.shoppingItem=new ShoppingCartItem();
+        this.reserveController = new ReserveController(mockItemService, mockAccountService, reserveOrderService);
         item.setItemId(1L);
         this.reserveOrder = new ReserveOrder(account.getAccount_id(), item.getItemId(), new Date());
         this.reserveController = new ReserveController(mockItemService, mockAccountService, reserveOrderService);
     }
-
     @Test
-    public void shouldReturnShoppingCartWhenNavigateToShoppingCart() throws Exception {
+    public void shouldNavigateToShoppingCartWithItem() throws Exception {
         Principal mockPrincipal = mock(Principal.class);
         given(mockPrincipal.getName()).willReturn("Jan");
+        item.setItemId(1L);
+        given(mockItemService.get(item.getItemId())).willReturn(item);
+        given(mockAccountService.getAccountIdByName("Jan")).willReturn(account);
+
+        String result = reserveController.navigateToShoppingCart(mockModel, mockPrincipal, item);
+        assertThat(result, is("shoppingCart"));
+        shoppingItem.setItem(item);
+        shoppingItem.setQuantity(1);
+        verify(mockModel).addAttribute("shoppingCartItem",shoppingItem);
+    }
+
+    @Test
+    public void shouldNavigateToConfirmPageWithItem() throws Exception {
+        Principal mockPrincipal = mock(Principal.class);
+        given(mockPrincipal.getName()).willReturn("Jan");
+        item.setItemId(1L);
+        given(mockItemService.get(item.getItemId())).willReturn(item);
+        given(mockItemService.get(item.getItemId())).willReturn(item);
+        given(mockAccountService.getAccountIdByName("Jan")).willReturn(account);
+        String result = reserveController.navigateToConfirmationPage(mockModel, mockPrincipal, shoppingItem, "1", "2");
+        assertThat(result, is("orderConfirmation"));
+        shoppingItem.setItem(item);
+        shoppingItem.setQuantity(2);
+        verify(mockModel).addAttribute("shoppingCartItem",shoppingItem);
+    }
+
+    @Test
+    public void shouldNavigateToUserProfile() throws Exception {
+        Principal mockPrincipal = mock(Principal.class);
+        given(mockPrincipal.getName()).willReturn("Jan");
+        given(mockAccountService.getAccountIdByName("Jan")).willReturn(new Account());
+        item.setItemId(1L);
         given(mockAccountService.getAccountIdByName("Jan")).willReturn(account);
         given(mockItemService.get(item.getItemId())).willReturn(item);
 
-        String result = reserveController.navigateToShoppingCart(mockModel, mockPrincipal, item);
-
-        verify(reserveOrderService).save(reserveOrder);
-        verify(mockItemService).decreaseQuantityByOne(item);
-        assertThat(result, is("shoppingCart"));
+        
+        String result = reserveController.addToReserveItem(mockModel, mockPrincipal, shoppingItem,"1","2");
+        assertThat(result, is("userProfile"));
+        verify(mockItemService).decreaseQuantity(item,2);
     }
+
+
+
 
     @Test
     public void shouldRedirectToLoginPageWhenPrincipleIsNull() throws Exception {
         String result = reserveController.navigateToShoppingCart(mockModel, null, item);
         assertThat(result, is("redirect:login"));
     }
+ 
 }

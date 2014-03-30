@@ -1,7 +1,7 @@
 package com.trailblazers.freewheelers.web;
 
 import com.trailblazers.freewheelers.model.Item;
-import com.trailblazers.freewheelers.service.impl.ItemService;
+import com.trailblazers.freewheelers.service.ItemService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;

@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/filters
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -502,40 +502,6 @@ mhofer
 
 22827
 
-ReplaceTokens.html
-file
-
-
-
-
-2014-03-19T10:02:10.000000Z
-44a8ec8b23df067fb9e4c130b155e394
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-20940
-
 SuffixLines.html
 file
 
@@ -569,6 +535,40 @@ mhofer
 
 
 17032
+
+ReplaceTokens.html
+file
+
+
+
+
+2014-03-19T10:02:10.000000Z
+44a8ec8b23df067fb9e4c130b155e394
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20940
 
 StripLineBreaks.html
 file
@@ -638,40 +638,6 @@ mhofer
 
 15504
 
-FixCrLfFilter.html
-file
-
-
-
-
-2014-03-19T10:02:10.000000Z
-f305ecf37ce61e7c3d848c10223f07c7
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-30928
-
 LineContains.Contains.html
 file
 
@@ -706,14 +672,14 @@ mhofer
 
 9631
 
-EscapeUnicode.html
+FixCrLfFilter.html
 file
 
 
 
 
 2014-03-19T10:02:10.000000Z
-3b09857e1c39efb187ce62b88191935c
+f305ecf37ce61e7c3d848c10223f07c7
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -738,7 +704,7 @@ mhofer
 
 
 
-16124
+30928
 
 HeadFilter.html
 file
@@ -773,6 +739,40 @@ mhofer
 
 
 17579
+
+EscapeUnicode.html
+file
+
+
+
+
+2014-03-19T10:02:10.000000Z
+3b09857e1c39efb187ce62b88191935c
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16124
 
 StripJavaComments.html
 file
@@ -944,40 +944,6 @@ mhofer
 
 5917
 
-TokenFilter.ChainableReaderFilter.html
-file
-
-
-
-
-2014-03-19T10:02:10.000000Z
-cd57f321fc0ee2b930e408ceb189ce4f
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-15355
-
 BaseParamFilterReader.html
 file
 
@@ -1012,14 +978,14 @@ mhofer
 
 17024
 
-package-summary.html
+TokenFilter.ChainableReaderFilter.html
 file
 
 
 
 
 2014-03-19T10:02:10.000000Z
-9fdd863dcb482eff5bed304a321a6325
+cd57f321fc0ee2b930e408ceb189ce4f
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -1044,7 +1010,7 @@ mhofer
 
 
 
-16916
+15355
 
 TokenFilter.html
 file
@@ -1079,6 +1045,40 @@ mhofer
 
 
 35744
+
+package-summary.html
+file
+
+
+
+
+2014-03-19T10:02:10.000000Z
+9fdd863dcb482eff5bed304a321a6325
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16916
 
 LineContains.html
 file

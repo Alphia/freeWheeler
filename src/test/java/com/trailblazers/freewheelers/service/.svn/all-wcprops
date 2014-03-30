@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/repo/twu36proj3/!svn/ver/388/trunk/src/test/java/com/trailblazers/freewheelers/service
+/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service
 END
 ServiceResultTest.java
 K 25
@@ -9,11 +9,35 @@ svn:wc:ra_dav:version-url
 V 110
 /repo/twu36proj3/!svn/ver/296/trunk/src/test/java/com/trailblazers/freewheelers/service/ServiceResultTest.java
 END
+ItemServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/ItemServiceImplTest.java
+END
+CountryServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/CountryServiceTest.java
+END
 TaxCalculatorServiceTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 117
 /repo/twu36proj3/!svn/ver/364/trunk/src/test/java/com/trailblazers/freewheelers/service/TaxCalculatorServiceTest.java
+END
+UserDetailsServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/UserDetailsServiceImplTest.java
+END
+AccountServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/AccountServiceTest.java
 END
 SurveyServiceTest.java
 K 25

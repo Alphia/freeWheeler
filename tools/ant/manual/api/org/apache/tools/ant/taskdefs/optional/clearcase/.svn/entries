@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/taskdefs/optional/clearcase
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -230,40 +230,6 @@ mhofer
 
 2626
 
-package-summary.html
-file
-
-
-
-
-2014-03-19T10:02:20.000000Z
-6e8b21279f1ceb7b370e9c22d8f1335e
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9173
-
 CCRmtype.html
 file
 
@@ -298,14 +264,14 @@ mhofer
 
 36584
 
-CCUpdate.html
+package-summary.html
 file
 
 
 
 
 2014-03-19T10:02:20.000000Z
-e6990a8638b4235f838728998fd10d94
+6e8b21279f1ceb7b370e9c22d8f1335e
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -330,7 +296,7 @@ mhofer
 
 
 
-36529
+9173
 
 package-tree.html
 file
@@ -365,6 +331,40 @@ mhofer
 
 
 8822
+
+CCUpdate.html
+file
+
+
+
+
+2014-03-19T10:02:20.000000Z
+e6990a8638b4235f838728998fd10d94
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+36529
 
 CCMkbl.html
 file

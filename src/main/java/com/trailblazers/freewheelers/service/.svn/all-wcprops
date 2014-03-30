@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/repo/twu36proj3/!svn/ver/389/trunk/src/main/java/com/trailblazers/freewheelers/service
+/repo/twu36proj3/!svn/ver/397/trunk/src/main/java/com/trailblazers/freewheelers/service
 END
 ServiceResult.java
 K 25
@@ -9,11 +9,41 @@ svn:wc:ra_dav:version-url
 V 106
 /repo/twu36proj3/!svn/ver/253/trunk/src/main/java/com/trailblazers/freewheelers/service/ServiceResult.java
 END
+ItemService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/twu36proj3/!svn/ver/396/trunk/src/main/java/com/trailblazers/freewheelers/service/ItemService.java
+END
+CountryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/twu36proj3/!svn/ver/397/trunk/src/main/java/com/trailblazers/freewheelers/service/CountryService.java
+END
 TaxCalculatorService.java
 K 25
 svn:wc:ra_dav:version-url
 V 113
 /repo/twu36proj3/!svn/ver/365/trunk/src/main/java/com/trailblazers/freewheelers/service/TaxCalculatorService.java
+END
+UserDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/twu36proj3/!svn/ver/397/trunk/src/main/java/com/trailblazers/freewheelers/service/UserDetailsServiceImpl.java
+END
+ReserveOrderService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/twu36proj3/!svn/ver/397/trunk/src/main/java/com/trailblazers/freewheelers/service/ReserveOrderService.java
+END
+AccountService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/twu36proj3/!svn/ver/397/trunk/src/main/java/com/trailblazers/freewheelers/service/AccountService.java
 END
 SurveyService.java
 K 25

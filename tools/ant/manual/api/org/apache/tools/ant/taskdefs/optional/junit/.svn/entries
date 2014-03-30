@@ -1,7 +1,7 @@
 10
 
 dir
-394
+397
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/taskdefs/optional/junit
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -536,40 +536,6 @@ mhofer
 
 11940
 
-XMLConstants.html
-file
-
-
-
-
-2014-03-19T10:02:24.000000Z
-c718f8c2bc0085983e3b10bddbe3d1dc
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-25825
-
 XMLJUnitResultFormatter.html
 file
 
@@ -603,6 +569,40 @@ mhofer
 
 
 25775
+
+XMLConstants.html
+file
+
+
+
+
+2014-03-19T10:02:24.000000Z
+c718f8c2bc0085983e3b10bddbe3d1dc
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25825
 
 JUnitTask.JUnitLogOutputStream.html
 file
@@ -638,40 +638,6 @@ mhofer
 
 13553
 
-JUnitTaskMirror.html
-file
-
-
-
-
-2014-03-19T10:02:24.000000Z
-a53dfcd2e03da863ad13adc846bba627
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-16896
-
 DOMUtil.NodeFilter.html
 file
 
@@ -706,14 +672,14 @@ mhofer
 
 7677
 
-AggregateTransformer.html
+JUnitTaskMirror.html
 file
 
 
 
 
 2014-03-19T10:02:24.000000Z
-2aa1e6e8f4e0042b69652b5d49983154
+a53dfcd2e03da863ad13adc846bba627
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -738,7 +704,7 @@ mhofer
 
 
 
-27183
+16896
 
 Enumerations.html
 file
@@ -774,6 +740,40 @@ mhofer
 
 9212
 
+AggregateTransformer.html
+file
+
+
+
+
+2014-03-19T10:02:24.000000Z
+2aa1e6e8f4e0042b69652b5d49983154
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27183
+
 JUnitResultFormatter.html
 file
 
@@ -807,40 +807,6 @@ mhofer
 
 
 14750
-
-DOMUtil.html
-file
-
-
-
-
-2014-03-19T10:02:24.000000Z
-0071aa126e3bccb8c82657a6c17ca0b2
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14529
 
 FailureRecorder.html
 file
@@ -876,14 +842,14 @@ mhofer
 
 43507
 
-JUnitTask.ForkMode.html
+DOMUtil.html
 file
 
 
 
 
 2014-03-19T10:02:24.000000Z
-db53cfdb4d37252f7510d65ed1f9aea4
+0071aa126e3bccb8c82657a6c17ca0b2
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -908,7 +874,7 @@ mhofer
 
 
 
-15814
+14529
 
 BatchTest.html
 file
@@ -944,6 +910,40 @@ mhofer
 
 19234
 
+JUnitTask.ForkMode.html
+file
+
+
+
+
+2014-03-19T10:02:24.000000Z
+db53cfdb4d37252f7510d65ed1f9aea4
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15814
+
 package-frame.html
 file
 
@@ -978,40 +978,6 @@ mhofer
 
 6612
 
-JUnitTaskMirror.JUnitTestRunnerMirror.html
-file
-
-
-
-
-2014-03-19T10:02:24.000000Z
-33a9f5a831fa8d1648ddd08521d47e98
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-19482
-
 BriefJUnitResultFormatter.html
 file
 
@@ -1045,6 +1011,40 @@ mhofer
 
 
 24025
+
+JUnitTaskMirror.JUnitTestRunnerMirror.html
+file
+
+
+
+
+2014-03-19T10:02:24.000000Z
+33a9f5a831fa8d1648ddd08521d47e98
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19482
 
 package-summary.html
 file

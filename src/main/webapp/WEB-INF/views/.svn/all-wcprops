@@ -1,7 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/repo/twu36proj3/!svn/ver/370/trunk/src/main/webapp/WEB-INF/views
+/repo/twu36proj3/!svn/ver/397/trunk/src/main/webapp/WEB-INF/views
+END
+orderConfirmation.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/twu36proj3/!svn/ver/397/trunk/src/main/webapp/WEB-INF/views/orderConfirmation.jsp
 END
 admin.jsp
 K 25
@@ -67,5 +73,5 @@ shoppingCart.jsp
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/repo/twu36proj3/!svn/ver/360/trunk/src/main/webapp/WEB-INF/views/shoppingCart.jsp
+/repo/twu36proj3/!svn/ver/396/trunk/src/main/webapp/WEB-INF/views/shoppingCart.jsp
 END

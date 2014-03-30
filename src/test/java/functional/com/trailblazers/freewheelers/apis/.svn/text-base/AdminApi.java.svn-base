@@ -5,8 +5,8 @@ import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ItemType;
 import com.trailblazers.freewheelers.model.SurveyEntry;
 import com.trailblazers.freewheelers.service.SurveyService;
-import com.trailblazers.freewheelers.service.impl.AccountService;
-import com.trailblazers.freewheelers.service.impl.ItemService;
+import com.trailblazers.freewheelers.service.AccountService;
+import com.trailblazers.freewheelers.service.ItemService;
 
 import static functional.com.trailblazers.freewheelers.helpers.SyntaxSugar.*;
 

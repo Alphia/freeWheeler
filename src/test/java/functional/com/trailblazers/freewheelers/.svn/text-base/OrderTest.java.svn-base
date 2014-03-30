@@ -26,7 +26,9 @@ public class OrderTest extends UserJourneyBase {
                 .should_list_item(Simplon_Frame);
 
         user
-                .reserves_item(Simplon_Frame)
+                .addsToshoppingCart(Simplon_Frame)
+                .checksOut()
+                .Buys()
                 .visits_home_page();
 
         screen
@@ -50,9 +52,10 @@ public class OrderTest extends UserJourneyBase {
 
     @Test
     public void shouldNavigateToLoginPageWhenReserveItemWithoutLogin() throws Exception {
-        String itemName = "Ascent Single-Speed Road Bike";
+        String itemName = "Simplon Pavo 3 Ultra";
 
-        admin.create_item(itemName, 1L);
+        admin.create_item(itemName,1L);
+
         user.visits_home_page()
                 .reserves_item(itemName);
 

@@ -1,8 +1,8 @@
 package com.trailblazers.freewheelers.web;
 
 import com.trailblazers.freewheelers.model.Account;
-import com.trailblazers.freewheelers.service.impl.AccountService;
-import com.trailblazers.freewheelers.service.impl.CountryService;
+import com.trailblazers.freewheelers.service.AccountService;
+import com.trailblazers.freewheelers.service.CountryService;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;
