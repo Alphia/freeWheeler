@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/twu36proj3/!svn/ver/388/trunk/src/test/java/com/trailblazers/freewheelers/service
+END
+ServiceResultTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repo/twu36proj3/!svn/ver/296/trunk/src/test/java/com/trailblazers/freewheelers/service/ServiceResultTest.java
+END
+TaxCalculatorServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/twu36proj3/!svn/ver/364/trunk/src/test/java/com/trailblazers/freewheelers/service/TaxCalculatorServiceTest.java
+END
+SurveyServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repo/twu36proj3/!svn/ver/327/trunk/src/test/java/com/trailblazers/freewheelers/service/SurveyServiceTest.java
+END
+VatRegionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/twu36proj3/!svn/ver/364/trunk/src/test/java/com/trailblazers/freewheelers/service/VatRegionTest.java
+END

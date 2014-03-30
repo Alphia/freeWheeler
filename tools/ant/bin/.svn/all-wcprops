@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin
+END
+antRun.pl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/antRun.pl
+END
+runant.pl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/runant.pl
+END
+ant
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/ant
+END
+complete-ant-cmd.pl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/complete-ant-cmd.pl
+END
+lcp.bat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/lcp.bat
+END
+ant.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/ant.cmd
+END
+envset.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/envset.cmd
+END
+ant.bat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/ant.bat
+END
+antRun
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/antRun
+END
+runrc.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/runrc.cmd
+END
+antRun.bat
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/antRun.bat
+END
+antenv.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/antenv.cmd
+END
+runant.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/twu36proj3/!svn/ver/132/trunk/tools/ant/bin/runant.py
+END
