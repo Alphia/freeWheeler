@@ -6,6 +6,14 @@ public class AccountRole {
     private String account_name;
     private String role;
 
+    public AccountRole(String accountName, String accountRole) {
+        this.account_name = accountName;
+        this.role = accountRole;
+    }
+
+    public AccountRole() {
+    }
+
     public Long getRole_id() {
         return role_id;
     }

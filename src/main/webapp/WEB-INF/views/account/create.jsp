@@ -46,6 +46,9 @@
                 <c:if test="${not empty validationMessage.errors['validPassword']}">
                     <span class="text-error">${validationMessage.errors["validPassword"]}</span>
                 </c:if>
+                <c:if test="${empty validationMessage.errors['validPassword'] and empty validationMessage.errors['password']}">
+                    <span class="text-countryNote" style="overflow:hidden; width:50px; max-width:50px;">Must be between 8-20 characters, and contain at least 1 number, 1 lowercase letter, 1 uppercase letter, 1 special character</span>
+                </c:if>
             </div>
         </div>
 
@@ -82,8 +85,6 @@
             </div>
         </div>
 
-
-
         <div>
             <label for="fld_phoneNumber">Phone Number</label>
             <div class="controls">
@@ -113,7 +114,11 @@
                 <select id="fld_country" name="country">
                     <option value="0">Select</option>
                     <c:forEach var="country" items="${validationMessage.countries}" varStatus="row">
-                    <option value="${country.getCountry_id()}">${country.getCountry_name()}</option>
+                        <c:if test="${country.getCountry_id() == validationMessage.userDetails['country_id']}">
+                            <option selected value="${country.getCountry_id()}">${country.getCountry_name()}</option>
+                        </c:if>
+
+                        <option value="${country.getCountry_id()}">${country.getCountry_name()}</option>
                     </c:forEach>
                 </select>
                 <c:if test="${not empty validationMessage.errors['country']}">

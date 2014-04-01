@@ -3,7 +3,6 @@ package functional.com.trailblazers.freewheelers.helpers;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 

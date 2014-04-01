@@ -7,7 +7,6 @@ public class ServiceResult<T extends Object> {
     private T model;
 
     public ServiceResult(Map<String, String> errors, T model) {
-
         this.errors = errors;
         this.model = model;
     }

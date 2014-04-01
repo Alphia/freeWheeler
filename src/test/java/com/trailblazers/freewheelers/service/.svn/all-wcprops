@@ -1,25 +1,25 @@
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service
+/repo/twu36proj3/!svn/ver/431/trunk/src/test/java/com/trailblazers/freewheelers/service
 END
 ServiceResultTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 110
-/repo/twu36proj3/!svn/ver/296/trunk/src/test/java/com/trailblazers/freewheelers/service/ServiceResultTest.java
+/repo/twu36proj3/!svn/ver/403/trunk/src/test/java/com/trailblazers/freewheelers/service/ServiceResultTest.java
 END
 ItemServiceImplTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 112
-/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/ItemServiceImplTest.java
+/repo/twu36proj3/!svn/ver/427/trunk/src/test/java/com/trailblazers/freewheelers/service/ItemServiceImplTest.java
 END
 CountryServiceTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 111
-/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/CountryServiceTest.java
+/repo/twu36proj3/!svn/ver/403/trunk/src/test/java/com/trailblazers/freewheelers/service/CountryServiceTest.java
 END
 TaxCalculatorServiceTest.java
 K 25
@@ -31,23 +31,17 @@ UserDetailsServiceImplTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 119
-/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/UserDetailsServiceImplTest.java
+/repo/twu36proj3/!svn/ver/424/trunk/src/test/java/com/trailblazers/freewheelers/service/UserDetailsServiceImplTest.java
 END
 AccountServiceTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 111
-/repo/twu36proj3/!svn/ver/397/trunk/src/test/java/com/trailblazers/freewheelers/service/AccountServiceTest.java
+/repo/twu36proj3/!svn/ver/431/trunk/src/test/java/com/trailblazers/freewheelers/service/AccountServiceTest.java
 END
 SurveyServiceTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 110
 /repo/twu36proj3/!svn/ver/327/trunk/src/test/java/com/trailblazers/freewheelers/service/SurveyServiceTest.java
-END
-VatRegionTest.java
-K 25
-svn:wc:ra_dav:version-url
-V 106
-/repo/twu36proj3/!svn/ver/364/trunk/src/test/java/com/trailblazers/freewheelers/service/VatRegionTest.java
 END

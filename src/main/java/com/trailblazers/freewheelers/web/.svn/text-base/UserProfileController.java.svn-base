@@ -1,9 +1,11 @@
 package com.trailblazers.freewheelers.web;
 
 import com.trailblazers.freewheelers.model.Account;
+import com.trailblazers.freewheelers.model.Country;
 import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ReserveOrder;
 import com.trailblazers.freewheelers.service.AccountService;
+import com.trailblazers.freewheelers.service.CountryService;
 import com.trailblazers.freewheelers.service.ItemService;
 import com.trailblazers.freewheelers.service.ReserveOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,28 +25,33 @@ import java.util.List;
 @RequestMapping("/userProfile")
 public class UserProfileController {
 
-    private AccountService accountService;
-    private ReserveOrderService reserveOrderService;
-    private ItemService itemService;
+    private final AccountService accountService;
+    private final ReserveOrderService reserveOrderService;
+    private final ItemService itemService;
+    private final CountryService countryService;
 
     @Autowired
     public UserProfileController(AccountService accountService, ReserveOrderService reserveOrderService,
-                                 ItemService itemService) {
+                                 ItemService itemService, CountryService countryService) {
         this.accountService = accountService;
         this.reserveOrderService = reserveOrderService;
         this.itemService = itemService;
+        this.countryService = countryService;
     }
-
+    
     @RequestMapping(value = "/{userName:.*}", method = RequestMethod.GET)
     public String get(@PathVariable String userName, Model model, Principal principal) {
         if (userName == null) {
             userName = principal.getName();
         }
         userName = decode(userName);
-        Account account = accountService.getAccountIdByName(userName);
+        Account account = accountService.getAccountByName(userName);
         List<Item> items = getItemsOrderByUser(account);
         model.addAttribute("items", items);
         model.addAttribute("userDetail", account);
+
+        Country country = countryService.get(account.getCountry_id());
+        model.addAttribute("userCountry", (country == null ? "" : country.getCountry_name()));
 
         return "userProfile";
     }

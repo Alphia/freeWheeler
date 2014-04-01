@@ -2,8 +2,8 @@ package com.trailblazers.freewheelers.web;
 
 import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ItemType;
-import com.trailblazers.freewheelers.service.ServiceResult;
 import com.trailblazers.freewheelers.service.ItemService;
+import com.trailblazers.freewheelers.service.ServiceResult;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,20 +24,20 @@ import static org.mockito.MockitoAnnotations.initMocks;
 public class ItemControllerTest {
 
     @Mock
-    ItemService itemService;
+    private SqlSession sqlSession;
     @Mock
-    SqlSession sqlSession;
+    private ItemController itemController;
+    @Mock
+    private ItemService itemService;
 
-    Model model;
-    ItemGrid itemGrid;
-    Item item;
-    ItemController itemController;
+    private Model model;
+    private ItemGrid itemGrid;
+    private Item item;
 
     @Before
     public void setUp(){
         initMocks(this);
-        itemController = new ItemController();
-        itemController.itemService = itemService;
+        itemController = new ItemController(itemService);
         model = new ExtendedModelMap();
         item = new Item();
         itemGrid = new ItemGrid(asList(item));

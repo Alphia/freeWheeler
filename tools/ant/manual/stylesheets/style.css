@@ -54,8 +54,8 @@ pre {
 
 /* code snippets in examples and tutorials */
 .code { 
-   background: #EFEFEF; 
-   margin-top: 
+   background: #EFEFEF;
+   margin-top: 0;
 }
 
 /* highlight console output */

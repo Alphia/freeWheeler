@@ -1,8 +1,7 @@
 package com.trailblazers.freewheelers.mappers;
 
 import com.trailblazers.freewheelers.model.AccountRole;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.*;
 
 public interface AccountRoleMapper {
 
@@ -11,4 +10,8 @@ public interface AccountRoleMapper {
     )
     @Options(keyProperty = "role_id", useGeneratedKeys = true)
     void insert(AccountRole accountRole);
+
+    @Select( "SELECT role from account_role where account_name = #{accountName}")
+    @Results(value ={@Result(property="role")})
+    AccountRole getByAccountName(String accountName);
 }

@@ -4,8 +4,8 @@ import com.trailblazers.freewheelers.model.Account;
 import com.trailblazers.freewheelers.model.NpsReport;
 import com.trailblazers.freewheelers.model.SurveyComments;
 import com.trailblazers.freewheelers.model.SurveyEntry;
-import com.trailblazers.freewheelers.service.SurveyService;
 import com.trailblazers.freewheelers.service.AccountService;
+import com.trailblazers.freewheelers.service.SurveyService;
 import com.trailblazers.freewheelers.web.forms.SurveyEntryForm;
 import org.apache.http.auth.BasicUserPrincipal;
 import org.junit.Before;
@@ -44,7 +44,7 @@ public class SurveyControllerTest {
     public void setUp() {
         initMocks(this);
         userAccount.setAccount_id(12L);
-        when(accountService.getAccountIdByName("john")).thenReturn(userAccount);
+        when(accountService.getAccountByName("john")).thenReturn(userAccount);
     }
 
     @Test

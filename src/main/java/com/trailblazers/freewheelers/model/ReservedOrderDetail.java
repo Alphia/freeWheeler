@@ -1,9 +1,5 @@
 package com.trailblazers.freewheelers.model;
 
-import com.trailblazers.freewheelers.model.Account;
-import com.trailblazers.freewheelers.model.Item;
-import com.trailblazers.freewheelers.model.OrderStatus;
-
 import java.util.Date;
 
 public class ReservedOrderDetail  {

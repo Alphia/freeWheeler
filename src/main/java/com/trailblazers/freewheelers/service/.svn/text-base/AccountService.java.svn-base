@@ -5,9 +5,9 @@ import com.trailblazers.freewheelers.mappers.AccountRoleMapper;
 import com.trailblazers.freewheelers.mappers.MyBatisUtil;
 import com.trailblazers.freewheelers.model.Account;
 import com.trailblazers.freewheelers.model.AccountRole;
-import com.trailblazers.freewheelers.model.AccountValidation;
-import com.trailblazers.freewheelers.service.ServiceResult;
+import com.trailblazers.freewheelers.service.validation.AccountValidation;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -20,24 +20,27 @@ public class AccountService {
     private static final String ADMIN = "ROLE_ADMIN";
 
     private final AccountRoleMapper accountRoleMapper;
-    private SqlSession sqlSession;
-    private AccountMapper accountMapper;
+    private final SqlSession sqlSession;
+    private final AccountMapper accountMapper;
+    private final AccountValidation accountValidation;
 
-    public AccountService() {
-        this(MyBatisUtil.getSqlSessionFactory().openSession());
+    @Autowired
+    public AccountService(AccountValidation accountValidation) {
+        this(MyBatisUtil.getSqlSessionFactory().openSession(), accountValidation);
     }
 
-    public AccountService(SqlSession sqlSession) {
+    public AccountService(SqlSession sqlSession, AccountValidation accountValidation) {
         this.sqlSession= sqlSession;
         this.accountMapper = sqlSession.getMapper(AccountMapper.class);
         this.accountRoleMapper = sqlSession.getMapper(AccountRoleMapper.class);
+        this.accountValidation = accountValidation;
     }
 
     public List<Account> findAll() {
         return accountMapper.findAll();
     }
 
-    public Account getAccountIdByName(String userName) {
+    public Account getAccountByName(String userName) {
         return accountMapper.getByName(userName);
     }
 
@@ -55,7 +58,6 @@ public class AccountService {
     }
 
     public ServiceResult<Account> createAccount(Account account) {
-        AccountValidation accountValidation = new AccountValidation();
         HashMap errors = accountValidation.verifyInputs(account);
 
         if(errors.isEmpty()) {
@@ -75,5 +77,9 @@ public class AccountService {
         return new AccountRole()
                 .setAccount_name(account.getAccount_name())
                 .setRole(role);
+    }
+
+    public AccountRole getAccountRoleFor(Account account) {
+        return accountRoleMapper.getByAccountName(account.getAccount_name());
     }
 }

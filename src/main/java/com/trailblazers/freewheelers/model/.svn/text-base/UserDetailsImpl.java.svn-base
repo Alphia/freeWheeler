@@ -7,20 +7,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/**
- * Created by jpramos on 3/28/14.
- */
 public class UserDetailsImpl implements UserDetails {
     private final Account account;
+    private final Collection<GrantedAuthority> authorities;
 
-    public UserDetailsImpl(Account account) {
+    public UserDetailsImpl(Account account, Collection<GrantedAuthority> authorities) {
         this.account = account;
+        this.authorities = authorities;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        ArrayList<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
         return authorities;
     }
 

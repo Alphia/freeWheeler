@@ -4,12 +4,12 @@ import com.trailblazers.freewheelers.model.Account;
 import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ItemType;
 import com.trailblazers.freewheelers.model.SurveyEntry;
-import com.trailblazers.freewheelers.service.SurveyService;
-import com.trailblazers.freewheelers.service.AccountService;
-import com.trailblazers.freewheelers.service.ItemService;
+import com.trailblazers.freewheelers.service.*;
+import com.trailblazers.freewheelers.service.validation.AccountValidation;
+import com.trailblazers.freewheelers.service.validation.ItemValidation;
+import com.trailblazers.freewheelers.service.validation.PasswordValidator;
 
 import static functional.com.trailblazers.freewheelers.helpers.SyntaxSugar.*;
-
 
 public class AdminApi {
 
@@ -18,8 +18,8 @@ public class AdminApi {
     private SurveyService surveyService;
 
     public AdminApi() {
-        this.accountService = new AccountService();
-        this.itemService = new ItemService();
+        this.accountService = new AccountService(new AccountValidation(new PasswordValidator()));
+        this.itemService = new ItemService(new ItemValidation());
         this.surveyService = new SurveyService();
     }
 
@@ -29,7 +29,7 @@ public class AdminApi {
     }
 
     public AdminApi there_is_no_account_for(String accountName) {
-        Account account = accountService.getAccountIdByName(accountName);
+        Account account = accountService.getAccountByName(accountName);
         if (account != null) {
             accountService.delete(account);
         }

@@ -3,9 +3,9 @@ package com.trailblazers.freewheelers.service;
 import com.trailblazers.freewheelers.mappers.ItemMapper;
 import com.trailblazers.freewheelers.mappers.MyBatisUtil;
 import com.trailblazers.freewheelers.model.Item;
-import com.trailblazers.freewheelers.model.ItemValidation;
-import com.trailblazers.freewheelers.service.ServiceResult;
+import com.trailblazers.freewheelers.service.validation.ItemValidation;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,14 +16,17 @@ public class ItemService {
 
     private final SqlSession sqlSession;
     private final ItemMapper itemMapper;
+    private final ItemValidation itemValidation;
 
-    public ItemService() {
-        this(MyBatisUtil.getSqlSessionFactory().openSession());
+    @Autowired
+    public ItemService(ItemValidation itemValidation) {
+        this(MyBatisUtil.getSqlSessionFactory().openSession(), itemValidation);
     }
 
-    protected ItemService(SqlSession sqlSession) {
+    protected ItemService(SqlSession sqlSession, ItemValidation itemValidation) {
         this.sqlSession = sqlSession;
         this.itemMapper = sqlSession.getMapper(ItemMapper.class);
+        this.itemValidation = itemValidation;
     }
 
     public Item get(Long item_id) {
@@ -69,7 +72,7 @@ public class ItemService {
 
 
     public ServiceResult<Item> saveItem(Item item) {
-        Map<String,String> errors = new ItemValidation().validate(item);
+        Map<String,String> errors = itemValidation.validate(item);
 
         if (errors.isEmpty()) {
             insertOrUpdate(item);

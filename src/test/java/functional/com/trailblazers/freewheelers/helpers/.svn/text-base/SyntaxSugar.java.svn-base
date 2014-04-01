@@ -6,13 +6,17 @@ import static java.math.BigDecimal.valueOf;
 
 public class SyntaxSugar {
 
-    public static final String PHONE_NUMBER = "555123456";
+    public static final String PHONE_NUMBER = "123456789";
     public static final String INVALID_PHONE_NUMBER = "555&234*56";
     public static final String PASSWORD = "sECret12#";
     public static final String EMAIL = "somebody@something.de";
+    public static final String GERMAN_EMAIL = "franz@something.de";
+    public static final String AMERICAN_EMAIL = "john@something.com";
     public static final BigDecimal SOME_PRICE = valueOf(49.99);
     public static final String PASSWORD2 = "SecRet1@3";
     public static final String COUNTRY = "Germany";
+    public static final String COUNTRY_UK = "UK";
+    public static final String COUNTRY_USA = "USA";
     public static final String COUNTRY_NOT_SELECTED = "Select";
     public static final long COUNTRY_ID=1;
 

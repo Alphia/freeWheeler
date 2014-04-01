@@ -44,7 +44,9 @@ public interface ReserveOrderMapper {
         @Result(property="item_id"),
         @Result(property="status"),
         @Result(property="note"),
-        @Result(property="reservation_timestamp")
+        @Result(property="reservation_timestamp"),
+        @Result(property="quantity")
+
     })
     List<ReserveOrder> findAll();
 
@@ -59,7 +61,8 @@ public interface ReserveOrderMapper {
             @Result(property="item_id"),
             @Result(property="status"),
             @Result(property="note"),
-            @Result(property="reservation_timestamp")
+            @Result(property="reservation_timestamp"),
+            @Result(property="quantity")
     })
     List<ReserveOrder> findAllFor(Long account_id);
 }

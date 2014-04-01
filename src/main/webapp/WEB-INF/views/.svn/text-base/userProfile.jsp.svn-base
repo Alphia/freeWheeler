@@ -6,11 +6,8 @@
         <div id="user-details" >
             <b>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>${userDetail.account_name}<br/>
             <b>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>${userDetail.email_address}<br/>
-                <c:if test="${not empty userDetail.getCountry()}"><b>Country&nbsp;: </b>${userDetail.getCountry().getCountry_name()}<br/></c:if>
-
+                <c:if test="${not empty userCountry}"><b>Country&nbsp;: </b>${userCountry}<br/></c:if>
                 <c:if test="${not empty userDetail.getPhoneNumber()}"><b>Phone&nbsp;&nbsp;&nbsp;&nbsp;: </b> ${userDetail.getPhoneNumber()}<br/></c:if><br/>
-
-
         </div>
 
 		<div class="page-action">Your Orders</div>

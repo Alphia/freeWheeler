@@ -1,7 +1,7 @@
 10
 
 dir
-397
+438
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/lib
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -570,18 +570,17 @@ mhofer
 
 2766
 
-ant-apache-oro.jar
+ant-commons-net.pom
 file
 
 
 
 
 2014-03-19T10:02:03.000000Z
-3deefadfe23b44e389c1ba058e75c3df
+9debae821dab720a4356e2a5c25ac040
 2013-02-08T08:45:46.133429Z
 132
 mhofer
-has-props
 
 
 
@@ -602,7 +601,8 @@ has-props
 
 
 
-45515
+
+3139
 
 ant-commons-logging.pom
 file
@@ -638,17 +638,18 @@ mhofer
 
 2879
 
-ant-commons-net.pom
+ant-apache-oro.jar
 file
 
 
 
 
 2014-03-19T10:02:03.000000Z
-9debae821dab720a4356e2a5c25ac040
+3deefadfe23b44e389c1ba058e75c3df
 2013-02-08T08:45:46.133429Z
 132
 mhofer
+has-props
 
 
 
@@ -669,42 +670,7 @@ mhofer
 
 
 
-
-3139
-
-ant-launcher.pom
-file
-
-
-
-
-2014-03-19T10:02:03.000000Z
-8c8a9d4b6874ff369472dd877506ccc1
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2361
+45515
 
 ant-apache-resolver.jar
 file
@@ -740,6 +706,40 @@ has-props
 
 9886
 
+ant-launcher.pom
+file
+
+
+
+
+2014-03-19T10:02:03.000000Z
+8c8a9d4b6874ff369472dd877506ccc1
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2361
+
 ant.pom
 file
 
@@ -773,40 +773,6 @@ mhofer
 
 
 9654
-
-ant-apache-bcel.jar
-file
-
-
-
-
-2014-03-19T10:02:03.000000Z
-bac3c92257363433e2f30286b0056ed0
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14548
 
 ant-javamail.jar
 file
@@ -842,14 +808,14 @@ has-props
 
 13773
 
-ant-swing.jar
+ant-apache-bcel.jar
 file
 
 
 
 
 2014-03-19T10:02:03.000000Z
-eecfc7b1a09d81a07edb07e9dd9e6756
+bac3c92257363433e2f30286b0056ed0
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -874,7 +840,7 @@ has-props
 
 
 
-13497
+14548
 
 ant-jsch.jar
 file
@@ -909,6 +875,40 @@ has-props
 
 
 46176
+
+ant-swing.jar
+file
+
+
+
+
+2014-03-19T10:02:03.000000Z
+eecfc7b1a09d81a07edb07e9dd9e6756
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13497
 
 ant-apache-regexp.pom
 file

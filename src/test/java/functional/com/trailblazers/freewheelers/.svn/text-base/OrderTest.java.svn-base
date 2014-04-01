@@ -1,5 +1,6 @@
 package functional.com.trailblazers.freewheelers;
 
+import functional.com.trailblazers.freewheelers.helpers.URLs;
 import org.junit.Test;
 
 import static functional.com.trailblazers.freewheelers.helpers.SyntaxSugar.ONLY_ONE_LEFT;
@@ -24,6 +25,7 @@ public class OrderTest extends UserJourneyBase {
 
         screen
                 .should_list_item(Simplon_Frame);
+
 
         user
                 .addsToshoppingCart(Simplon_Frame)
@@ -53,12 +55,18 @@ public class OrderTest extends UserJourneyBase {
     @Test
     public void shouldNavigateToLoginPageWhenReserveItemWithoutLogin() throws Exception {
         String itemName = "Simplon Pavo 3 Ultra";
+        String Bob = "Bob Buyer";
 
-        admin.create_item(itemName,1L);
+        admin.create_item(itemName, 1L)
+                .there_is_a_user(Bob, PASSWORD);
 
         user.visits_home_page()
                 .reserves_item(itemName);
 
         screen.shows_login();
+
+        user.logs_in_with(Bob, PASSWORD);
+
+        screen.shows_correct_url(URLs.shoppingCart());
     }
 }

@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/repo/twu36proj3/!svn/ver/396/trunk/src/test/java/functional/com/trailblazers/freewheelers
+/repo/twu36proj3/!svn/ver/429/trunk/src/test/java/functional/com/trailblazers/freewheelers
 END
 ShoppingCartTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 112
-/repo/twu36proj3/!svn/ver/370/trunk/src/test/java/functional/com/trailblazers/freewheelers/ShoppingCartTest.java
+/repo/twu36proj3/!svn/ver/420/trunk/src/test/java/functional/com/trailblazers/freewheelers/ShoppingCartTest.java
+END
+OrderConfirmationTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/twu36proj3/!svn/ver/420/trunk/src/test/java/functional/com/trailblazers/freewheelers/OrderConfirmationTest.java
 END
 UserJourneyBase.java
 K 25
@@ -37,11 +43,11 @@ OrderTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 105
-/repo/twu36proj3/!svn/ver/396/trunk/src/test/java/functional/com/trailblazers/freewheelers/OrderTest.java
+/repo/twu36proj3/!svn/ver/420/trunk/src/test/java/functional/com/trailblazers/freewheelers/OrderTest.java
 END
 AccountTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 107
-/repo/twu36proj3/!svn/ver/389/trunk/src/test/java/functional/com/trailblazers/freewheelers/AccountTest.java
+/repo/twu36proj3/!svn/ver/415/trunk/src/test/java/functional/com/trailblazers/freewheelers/AccountTest.java
 END

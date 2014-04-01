@@ -1,6 +1,5 @@
 package com.trailblazers.freewheelers.service;
 
-import org.apache.commons.collections.MapUtils;
 import org.junit.Test;
 
 import java.util.HashMap;

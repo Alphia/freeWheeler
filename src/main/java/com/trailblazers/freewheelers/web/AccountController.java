@@ -1,10 +1,9 @@
 package com.trailblazers.freewheelers.web;
 
-import com.trailblazers.freewheelers.mappers.MyBatisUtil;
 import com.trailblazers.freewheelers.model.Account;
-import com.trailblazers.freewheelers.service.ServiceResult;
 import com.trailblazers.freewheelers.service.AccountService;
 import com.trailblazers.freewheelers.service.CountryService;
+import com.trailblazers.freewheelers.service.ServiceResult;
 import com.trailblazers.freewheelers.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -27,7 +26,7 @@ import java.util.Map;
 public class AccountController {
 
     private final AccountService accountService;
-    private CountryService countryService;
+    private final CountryService countryService;
 
     @Autowired
     public AccountController(AccountService accountService, CountryService countryService) {
@@ -81,7 +80,7 @@ public class AccountController {
     }
 
     private void logUserIn(Account account) {
-        UserDetailsService userDetailsService = new UserDetailsServiceImpl(MyBatisUtil.getSqlSessionFactory().openSession());
+        UserDetailsService userDetailsService = new UserDetailsServiceImpl(accountService);
         UserDetails userDetails = userDetailsService.loadUserByUsername(account.getAccount_name());
         UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(userDetails, account.getPassword(), userDetails.getAuthorities());
 

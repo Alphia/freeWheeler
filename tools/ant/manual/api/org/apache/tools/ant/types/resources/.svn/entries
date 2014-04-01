@@ -1,7 +1,7 @@
 10
 
 dir
-397
+438
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/types/resources
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -542,40 +542,6 @@ mhofer
 
 50489
 
-Tokens.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-2c459d495b729358fa15270e4d5b8a9e
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-22498
-
 JavaConstantResource.html
 file
 
@@ -610,14 +576,14 @@ mhofer
 
 23054
 
-Archives.html
+Tokens.html
 file
 
 
 
 
 2014-03-19T10:02:14.000000Z
-75696862feaa376b3aab2ab584ec4e38
+2c459d495b729358fa15270e4d5b8a9e
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -642,7 +608,7 @@ mhofer
 
 
 
-26485
+22498
 
 LazyResourceCollectionWrapper.html
 file
@@ -678,6 +644,40 @@ mhofer
 
 21131
 
+Archives.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+75696862feaa376b3aab2ab584ec4e38
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26485
+
 Touchable.html
 file
 
@@ -712,40 +712,6 @@ mhofer
 
 7467
 
-ZipResource.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-e411a5a15c5290a5b26054d51d87a695
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-31056
-
 LogOutputResource.html
 file
 
@@ -779,6 +745,40 @@ mhofer
 
 
 22698
+
+ZipResource.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+e411a5a15c5290a5b26054d51d87a695
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+31056
 
 CompressedResource.html
 file
@@ -848,14 +848,14 @@ mhofer
 
 7720
 
-StringResource.html
+MappedResource.html
 file
 
 
 
 
 2014-03-19T10:02:14.000000Z
-54a0583ba23fedd848ef916503ccc4a5
+d3454b8549cded348cb3aa99677be80c
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -880,7 +880,7 @@ mhofer
 
 
 
-33858
+25875
 
 AbstractClasspathResource.html
 file
@@ -916,14 +916,14 @@ mhofer
 
 34689
 
-MappedResource.html
+StringResource.html
 file
 
 
 
 
 2014-03-19T10:02:14.000000Z
-d3454b8549cded348cb3aa99677be80c
+54a0583ba23fedd848ef916503ccc4a5
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -948,7 +948,7 @@ mhofer
 
 
 
-25875
+33858
 
 GZipResource.html
 file

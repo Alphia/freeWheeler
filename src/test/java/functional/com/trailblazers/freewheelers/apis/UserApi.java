@@ -201,4 +201,21 @@ public class UserApi {
             }
         });
     }
+
+
+    public UserApi fill_delivery_address() {
+        driver.findElement(By.id("fld_name")).sendKeys("John");
+        driver.findElement(By.id("fld_phone")).sendKeys("123456789");
+        driver.findElement(By.id("fld_street1")).sendKeys("Lane 5");
+        driver.findElement(By.id("fld_street2")).sendKeys("Long Road");
+        driver.findElement(By.id("fld_city")).sendKeys("Pune");
+        driver.findElement(By.id("fld_state")).sendKeys("Maharastra");
+        driver.findElement(By.id("fld_postcode")).sendKeys("111111");
+        return this;
+    }
+
+    public UserApi confirm_shopping_cart() {
+        driver.findElement(By.id("confirm")).click();
+        return this;
+    }
 }

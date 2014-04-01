@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/repo/twu36proj3/!svn/ver/363/trunk/src/main/webapp/WEB-INF/spring
+/repo/twu36proj3/!svn/ver/405/trunk/src/main/webapp/WEB-INF/spring
 END
 app-config.xml
 K 25
@@ -19,7 +19,7 @@ security-app-context.xml
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/repo/twu36proj3/!svn/ver/363/trunk/src/main/webapp/WEB-INF/spring/security-app-context.xml
+/repo/twu36proj3/!svn/ver/405/trunk/src/main/webapp/WEB-INF/spring/security-app-context.xml
 END
 mvc-config.xml
 K 25

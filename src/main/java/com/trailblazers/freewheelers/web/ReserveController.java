@@ -1,9 +1,6 @@
 package com.trailblazers.freewheelers.web;
 
-import com.trailblazers.freewheelers.model.Account;
-import com.trailblazers.freewheelers.model.Item;
-import com.trailblazers.freewheelers.model.ReserveOrder;
-import com.trailblazers.freewheelers.model.ShoppingCartItem;
+import com.trailblazers.freewheelers.model.*;
 import com.trailblazers.freewheelers.service.AccountService;
 import com.trailblazers.freewheelers.service.ItemService;
 import com.trailblazers.freewheelers.service.ReserveOrderService;
@@ -15,53 +12,50 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.view.RedirectView;
 
-
+import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static org.springframework.util.Assert.isNull;
-
 @Controller
 @RequestMapping("/shoppingCart")
 public class ReserveController {
 
-    private ItemService itemService;
-    private AccountService accountService;
-    private ReserveOrderService reserveOrderService;
-    ReserveOrder reserveOrder;
-    ShoppingCartItem shoppingItem;
-    TaxCalculatorService taxCalculatorService;
+    private final ItemService itemService;
+    private final AccountService accountService;
+    private final ReserveOrderService reserveOrderService;
+    private final TaxCalculatorService taxCalculatorService;
+
+    private ShoppingCartItem shoppingItem;
 
     @Autowired
-    public ReserveController(ItemService itemService, AccountService accountService, ReserveOrderService reserveOrderService) {
+    public ReserveController(ItemService itemService, AccountService accountService,
+                             ReserveOrderService reserveOrderService,
+                             TaxCalculatorService taxCalculatorService) {
         this.itemService = itemService;
         this.accountService = accountService;
         this.reserveOrderService = reserveOrderService;
-        this.taxCalculatorService=new TaxCalculatorService();
+        this.taxCalculatorService= taxCalculatorService;
     }
 
     @RequestMapping(method = RequestMethod.POST, params = "shoppingCart=Reserve Item")
     public String navigateToShoppingCart(Model model, Principal principal, @ModelAttribute Item item) {
-        if (principal == null) {
-            return "redirect:login";
-        }
-        String userName = principal.getName();
-        Account account = accountService.getAccountIdByName(userName);
+        Account account = getAccount(principal);
         Item itemToReserve = itemService.get(item.getItemId());
 
         shoppingItem = setShoppingCartItem(account,itemToReserve,1);
 
-
         model.addAttribute("shoppingCartItem", shoppingItem);
+        model.addAttribute("region", VatRegion.findRegion(account.getCountry_id()));
         return "shoppingCart";
     }
 
     private ShoppingCartItem setShoppingCartItem(Account account,Item itemToReserve,int quantity) {
-        shoppingItem=new ShoppingCartItem();
-        double tax=Double.parseDouble(taxCalculatorService.calculateVat(account,itemToReserve).toString());
+        shoppingItem = new ShoppingCartItem();
+        double tax = taxCalculatorService.calculateVat(account,itemToReserve).doubleValue();
         shoppingItem.setItem(itemToReserve);
         shoppingItem.setQuantity(quantity);
         shoppingItem.setTax(tax);
@@ -73,37 +67,40 @@ public class ReserveController {
 
         Item itemToReserve = itemService.get(Long.parseLong(id));
         int quantity = Integer.parseInt(qty);
-        String userName = principal.getName();
-        Account account = accountService.getAccountIdByName(userName);
+        Account account = getAccount(principal);
         shoppingItem = setShoppingCartItem(account,itemToReserve,quantity);
         model.addAttribute("shoppingCartItem", shoppingItem);
+        model.addAttribute("region", VatRegion.findRegion(account.getCountry_id()));
 
         return "orderConfirmation";
     }
 
-    @RequestMapping(value = {"/buy"}, method = RequestMethod.POST, params = "shoppingCart=Buy")
-    public String addToReserveItem(Model model, Principal principal, @ModelAttribute ShoppingCartItem shoppingCartItem, @RequestParam("id") String id, @RequestParam("qqty") String qty) {
-        String userName = principal.getName();
-        int quantity = Integer.parseInt(qty);
-        Account account = accountService.getAccountIdByName(userName);
-        Item itemToReserve = setReserveOrder(id, quantity, account);
-
-        itemService.decreaseQuantity(itemToReserve, quantity);
+    @RequestMapping(value = {"/buy"}, method = RequestMethod.POST)
+    public RedirectView addToReserveItem(Model model, Principal principal, HttpServletRequest request) {
+        Account account = getAccount(principal);
+        saveNewOrder(request, account);
         List<Item> items = getOrderList(account);
         model.addAttribute("userDetail", account);
         model.addAttribute("items", items);
-        return "userProfile";
+
+        return new RedirectView("../userProfile");
     }
 
-    private Item setReserveOrder(String id, int qty, Account account) {
-        Item itemToReserve = itemService.get(Long.parseLong(id));
-        Date rightNow = new Date();
-        reserveOrder=new ReserveOrder();
-        reserveOrder.setQuantity(qty);
-        ReserveOrder reserveOrder = new ReserveOrder(account.getAccount_id(), itemToReserve.getItemId(), rightNow);
+    private Account getAccount(Principal principal) {
+        String userName = principal.getName();
+        return accountService.getAccountByName(userName);
+    }
 
-        reserveOrderService.save(reserveOrder);
-        return itemToReserve;
+    private void saveNewOrder(HttpServletRequest request, Account account) {
+        String id = request.getParameter("id");
+        Item item = itemService.get(Long.parseLong(id));
+        ReserveOrder order = new ReserveOrder(account.getAccount_id(), item.getItemId(), new Date());
+
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        order.setQuantity(quantity);
+
+        reserveOrderService.save(order);
+        itemService.decreaseQuantity(item, quantity);
     }
 
     private List<Item> getOrderList(Account account) {
@@ -114,6 +111,4 @@ public class ReserveController {
         }
         return items;
     }
-
-
 }

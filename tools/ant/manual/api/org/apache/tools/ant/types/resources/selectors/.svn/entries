@@ -1,7 +1,7 @@
 10
 
 dir
-397
+438
 http://svn.university.thoughtworks.com/repo/twu36proj3/trunk/tools/ant/manual/api/org/apache/tools/ant/types/resources/selectors
 http://svn.university.thoughtworks.com/repo/twu36proj3
 
@@ -94,40 +94,6 @@ mhofer
 
 10181
 
-Name.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-9c824ed36074c0a3f51ab091eb7ffe2e
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-16954
-
 Or.html
 file
 
@@ -161,6 +127,40 @@ mhofer
 
 
 19349
+
+Name.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+9c824ed36074c0a3f51ab091eb7ffe2e
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16954
 
 Type.html
 file
@@ -230,40 +230,6 @@ mhofer
 
 2774
 
-package-summary.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-c7c0ac1b131dc3db83ece58cac97edcc
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9645
-
 Compare.html
 file
 
@@ -298,14 +264,14 @@ mhofer
 
 23022
 
-package-tree.html
+package-summary.html
 file
 
 
 
 
 2014-03-19T10:02:14.000000Z
-9baed8a12de52fdb32b95bfa1c85c009
+c7c0ac1b131dc3db83ece58cac97edcc
 2013-02-08T08:45:46.133429Z
 132
 mhofer
@@ -330,7 +296,7 @@ mhofer
 
 
 
-12321
+9645
 
 ResourceSelector.html
 file
@@ -365,6 +331,40 @@ mhofer
 
 
 10684
+
+package-tree.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+9baed8a12de52fdb32b95bfa1c85c009
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12321
 
 InstanceOf.html
 file
@@ -434,40 +434,6 @@ mhofer
 
 22554
 
-Majority.html
-file
-
-
-
-
-2014-03-19T10:02:14.000000Z
-127b95b52ddc701e23365ce5a964243b
-2013-02-08T08:45:46.133429Z
-132
-mhofer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-20154
-
 Type.FileDir.html
 file
 
@@ -501,6 +467,40 @@ mhofer
 
 
 12257
+
+Majority.html
+file
+
+
+
+
+2014-03-19T10:02:14.000000Z
+127b95b52ddc701e23365ce5a964243b
+2013-02-08T08:45:46.133429Z
+132
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20154
 
 None.html
 file

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 103
-/repo/twu36proj3/!svn/ver/387/trunk/src/test/java/integration/com/trailblazers/freewheelers/persistence
+/repo/twu36proj3/!svn/ver/410/trunk/src/test/java/integration/com/trailblazers/freewheelers/persistence
 END
 MapperTestBase.java
 K 25
@@ -13,13 +13,13 @@ AccountMapperTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/repo/twu36proj3/!svn/ver/387/trunk/src/test/java/integration/com/trailblazers/freewheelers/persistence/AccountMapperTest.java
+/repo/twu36proj3/!svn/ver/403/trunk/src/test/java/integration/com/trailblazers/freewheelers/persistence/AccountMapperTest.java
 END
 AccountRoleMapperTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 130
-/repo/twu36proj3/!svn/ver/387/trunk/src/test/java/integration/com/trailblazers/freewheelers/persistence/AccountRoleMapperTest.java
+/repo/twu36proj3/!svn/ver/410/trunk/src/test/java/integration/com/trailblazers/freewheelers/persistence/AccountRoleMapperTest.java
 END
 ItemMapperTest.java
 K 25

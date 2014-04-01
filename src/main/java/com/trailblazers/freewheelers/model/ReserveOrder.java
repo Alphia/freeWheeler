@@ -1,10 +1,7 @@
 package com.trailblazers.freewheelers.model;
 
-import org.springframework.stereotype.Service;
-
 import java.util.Date;
 
-@Service
 public class ReserveOrder {
 
     private Long order_id;

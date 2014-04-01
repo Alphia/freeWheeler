@@ -2,9 +2,12 @@ package com.trailblazers.freewheelers.service;
 
 import com.trailblazers.freewheelers.model.Account;
 import com.trailblazers.freewheelers.model.Item;
+import com.trailblazers.freewheelers.model.VatRegion;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 public class TaxCalculatorService {
 
     private static final double VAT_PERCENTAGE = 0.2;

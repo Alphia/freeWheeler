@@ -6,13 +6,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static java.util.UUID.randomUUID;
-import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class AccountMapperTest extends MapperTestBase {
 
+    public static final String EMAIL_ADDRESS = randomUUID() + "some.body@gmail.com";
     private AccountMapper accountMapper;
 
     @Before
@@ -67,8 +67,8 @@ public class AccountMapperTest extends MapperTestBase {
         int before = accountMapper.findAll().size();
 
         accountMapper.insert(someAccount());
-        accountMapper.insert(someAccount());
-        accountMapper.insert(someAccount());
+        accountMapper.insert(anotherAccount());
+        accountMapper.insert(someOtherAccount());
 
         assertThat(accountMapper.findAll().size(), is(before + 3));
     }
@@ -92,11 +92,43 @@ public class AccountMapperTest extends MapperTestBase {
     private Account someAccount() {
         return new Account()
                 .setAccount_name("Some Body")
-                .setEmail_address(randomUUID() + "some.body@gmail.com")
+                .setEmail_address(EMAIL_ADDRESS)
                 .setPassword("V3ry S3cret")
                 .setPhoneNumber("12345")
                 .setEnabled(true)
                 .setCountry_id(0L);
+    }
+
+    private Account anotherAccount() {
+        return new Account()
+                .setAccount_name("Some Body")
+                .setEmail_address(randomUUID() + "another.some.body@gmail.com")
+                .setPassword("V3ry S3cret")
+                .setPhoneNumber("12345")
+                .setEnabled(true)
+                .setCountry_id(0L);
+    }
+
+    private Account someOtherAccount() {
+        return new Account()
+                .setAccount_name("Some Body")
+                .setEmail_address(randomUUID() + "some.body.else@gmail.com")
+                .setPassword("V3ry S3cret")
+                .setPhoneNumber("12345")
+                .setEnabled(true)
+                .setCountry_id(0L);
+    }
+
+    @Test
+    public void isEmailAddressAlreadyInDatabase() throws Exception {
+        //given
+        Account account = someAccount();
+        accountMapper.insert(account);
+
+        //when
+        Account fetchedFromDB = accountMapper.getByEmail(EMAIL_ADDRESS);
+        //then
+        assertThat(fetchedFromDB,is(account));
     }
 }
 

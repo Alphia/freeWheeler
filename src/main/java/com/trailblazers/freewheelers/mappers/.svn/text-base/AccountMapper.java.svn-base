@@ -72,4 +72,19 @@ public interface AccountMapper {
     )
     @Options(flushCache = true)
     void delete(Account account);
+
+    @Select(
+            "SELECT account_id, account_name, email_address, password, phone_number, enabled, country_id " +
+                    "FROM account " +
+                    "WHERE email_address = #{email_address} "
+    )@Results(value = {
+            @Result(property="account_id"),
+            @Result(property="account_name"),
+            @Result(property="emailAddress", column="email_address"),
+            @Result(property="password"),
+            @Result(property="phoneNumber", column="phone_number"),
+            @Result(property="enabled"),
+            @Result(property="country_id")
+    })
+    Account getByEmail(String email_address);
 }

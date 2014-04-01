@@ -1,7 +1,6 @@
 package com.trailblazers.freewheelers.service;
 
 import com.trailblazers.freewheelers.mappers.CountryMapper;
-import com.trailblazers.freewheelers.service.CountryService;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Before;
 import org.junit.Test;

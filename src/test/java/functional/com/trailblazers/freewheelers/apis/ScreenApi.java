@@ -11,10 +11,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class ScreenApi {
     private WebDriver driver;
@@ -76,6 +76,12 @@ public class ScreenApi {
         return this;
     }
 
+    public ScreenApi should_list_item_at_homepage(String item)
+    {
+        assertNumberOfRows(1, HomeTable.nameFieldFor(item));
+        return this;
+    }
+
     public ScreenApi there_should_be_an_order(String item, String state) {
         WebElement select = driver.findElement(OrderTable.selectFor(item));
         String selected = new Select(select).getFirstSelectedOption().getText();
@@ -107,8 +113,44 @@ public class ScreenApi {
         return this;
     }
 
-    public ScreenApi shows_shopping_cart() {
-        assertThat(driver.getCurrentUrl(), is(URLs.shoppingCart()));
+    public ScreenApi shows_correct_url(String expectedUrl) {
+        assertThat(driver.getCurrentUrl(), is(expectedUrl));
+        return this;
+    }
+
+    public ScreenApi shows_order_confirmation() {
+        assertThat(driver.getCurrentUrl(), is(URLs.shoppingCartConfirm()));
+        return this;
+    }
+
+    public ScreenApi go_to_user_profile() {
+        assertThat(driver.getCurrentUrl(), is(URLs.userProfile()));
+        return this;
+    }
+
+    public ScreenApi show_vat_tax(double actualVatTax) {
+        String vatTax = driver.findElement(By.id("tax")).getText();
+        assertThat(Double.parseDouble(vatTax) ,is(actualVatTax));
+        return this;
+    }
+
+    public ScreenApi show_vat_exempt() {
+        String vatExempt = driver.findElement(By.id("vat_exempt")).getText();
+        assertThat(vatExempt, is("VAT Exempt"));
+        return this;
+    }
+
+    public ScreenApi show_vat_percentage_label() {
+        String vatPercentageMessage = driver.findElement(By.id("vat_percentage_message")).getText();
+        assertThat(vatPercentageMessage, is("VAT(20%)"));
+        return this;
+    }
+
+    public ScreenApi shows_no_vat() {
+        List<WebElement> vatExempt = driver.findElements(By.id("vat_exempt"));
+        List<WebElement> vatPercentageMessage = driver.findElements(By.id("vat_percentage_message"));
+        assertTrue(vatExempt.isEmpty());
+        assertTrue(vatPercentageMessage.isEmpty());
         return this;
     }
 }

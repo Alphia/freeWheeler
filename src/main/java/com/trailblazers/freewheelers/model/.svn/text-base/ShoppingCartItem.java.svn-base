@@ -7,6 +7,30 @@ public class ShoppingCartItem {
     private int quantity;
     private double tax;
 
+    public double getTax() {
+        return tax;
+    }
+
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -30,29 +54,5 @@ public class ShoppingCartItem {
         temp = Double.doubleToLongBits(tax);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
-    }
-
-    public double getTax() {
-        return tax;
-    }
-
-    public void setTax(double tax) {
-        this.tax = tax;
-    }
-
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }

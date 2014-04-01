@@ -2,8 +2,10 @@ package com.trailblazers.freewheelers.web;
 
 import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ItemType;
-import com.trailblazers.freewheelers.service.ServiceResult;
 import com.trailblazers.freewheelers.service.ItemService;
+import com.trailblazers.freewheelers.service.validation.ItemValidation;
+import com.trailblazers.freewheelers.service.ServiceResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,7 +19,12 @@ public class ItemController{
 	static final String ITEM_PAGE = "/item";
 	static final String ITEM_LIST_PAGE = "/itemList";
 
-    ItemService itemService = new ItemService();
+    private final ItemService itemService;
+
+    @Autowired
+    public ItemController(ItemService itemService) {
+        this.itemService = itemService;
+    }
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String get(Model model, @ModelAttribute Item item) {

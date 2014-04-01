@@ -5,16 +5,22 @@ import com.trailblazers.freewheelers.model.Item;
 import com.trailblazers.freewheelers.model.ReserveOrder;
 import com.trailblazers.freewheelers.model.ShoppingCartItem;
 import com.trailblazers.freewheelers.service.AccountService;
-import com.trailblazers.freewheelers.service.ReserveOrderService;
 import com.trailblazers.freewheelers.service.ItemService;
+import org.apache.http.HttpRequest;
+import com.trailblazers.freewheelers.service.ReserveOrderService;
+import com.trailblazers.freewheelers.service.TaxCalculatorService;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;
+import org.springframework.web.servlet.view.RedirectView;
+
+import javax.servlet.http.HttpServletRequest;
+
 import java.security.Principal;
 import java.util.Date;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -28,6 +34,7 @@ public class ReserveControllerTest {
     private ReserveOrderService reserveOrderService;
     private ReserveOrder reserveOrder;
     private ReserveController reserveController;
+    private TaxCalculatorService taxCalculatorService;
     private ShoppingCartItem shoppingItem;
     private Account account;
 
@@ -37,6 +44,7 @@ public class ReserveControllerTest {
         this.mockItemService = mock(ItemService.class);
         this.mockAccountService = mock(AccountService.class);
         this.reserveOrderService = mock(ReserveOrderService.class);
+        this.taxCalculatorService = mock(TaxCalculatorService.class);
 
         account = new Account();
         account.setAccount_id(1L);
@@ -45,11 +53,12 @@ public class ReserveControllerTest {
         this.mockAccountService = mock(AccountService.class);
         this.reserveOrderService = mock(ReserveOrderService.class);
         this.reserveOrder = new ReserveOrder();
+        this.taxCalculatorService = new TaxCalculatorService();
         this.shoppingItem=new ShoppingCartItem();
-        this.reserveController = new ReserveController(mockItemService, mockAccountService, reserveOrderService);
+        this.reserveController = new ReserveController(mockItemService, mockAccountService, reserveOrderService, taxCalculatorService);
         item.setItemId(1L);
         this.reserveOrder = new ReserveOrder(account.getAccount_id(), item.getItemId(), new Date());
-        this.reserveController = new ReserveController(mockItemService, mockAccountService, reserveOrderService);
+        this.reserveController = new ReserveController(mockItemService, mockAccountService, reserveOrderService, taxCalculatorService);
     }
     @Test
     public void shouldNavigateToShoppingCartWithItem() throws Exception {
@@ -57,7 +66,7 @@ public class ReserveControllerTest {
         given(mockPrincipal.getName()).willReturn("Jan");
         item.setItemId(1L);
         given(mockItemService.get(item.getItemId())).willReturn(item);
-        given(mockAccountService.getAccountIdByName("Jan")).willReturn(account);
+        given(mockAccountService.getAccountByName("Jan")).willReturn(account);
 
         String result = reserveController.navigateToShoppingCart(mockModel, mockPrincipal, item);
         assertThat(result, is("shoppingCart"));
@@ -73,7 +82,7 @@ public class ReserveControllerTest {
         item.setItemId(1L);
         given(mockItemService.get(item.getItemId())).willReturn(item);
         given(mockItemService.get(item.getItemId())).willReturn(item);
-        given(mockAccountService.getAccountIdByName("Jan")).willReturn(account);
+        given(mockAccountService.getAccountByName("Jan")).willReturn(account);
         String result = reserveController.navigateToConfirmationPage(mockModel, mockPrincipal, shoppingItem, "1", "2");
         assertThat(result, is("orderConfirmation"));
         shoppingItem.setItem(item);
@@ -85,24 +94,17 @@ public class ReserveControllerTest {
     public void shouldNavigateToUserProfile() throws Exception {
         Principal mockPrincipal = mock(Principal.class);
         given(mockPrincipal.getName()).willReturn("Jan");
-        given(mockAccountService.getAccountIdByName("Jan")).willReturn(new Account());
+        given(mockAccountService.getAccountByName("Jan")).willReturn(new Account());
         item.setItemId(1L);
-        given(mockAccountService.getAccountIdByName("Jan")).willReturn(account);
+        given(mockAccountService.getAccountByName("Jan")).willReturn(account);
         given(mockItemService.get(item.getItemId())).willReturn(item);
 
-        
-        String result = reserveController.addToReserveItem(mockModel, mockPrincipal, shoppingItem,"1","2");
-        assertThat(result, is("userProfile"));
+        HttpServletRequest mockRequest = mock(HttpServletRequest.class);
+        given(mockRequest.getParameter("id")).willReturn("1");
+        given(mockRequest.getParameter("quantity")).willReturn("2");
+        RedirectView result = reserveController.addToReserveItem(mockModel, mockPrincipal, mockRequest);
+        assertThat(result.getUrl(), is("../userProfile"));
         verify(mockItemService).decreaseQuantity(item,2);
-    }
-
-
-
-
-    @Test
-    public void shouldRedirectToLoginPageWhenPrincipleIsNull() throws Exception {
-        String result = reserveController.navigateToShoppingCart(mockModel, null, item);
-        assertThat(result, is("redirect:login"));
     }
  
 }

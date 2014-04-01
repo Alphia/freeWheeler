@@ -25,28 +25,6 @@ public class Account {
         this.country_id = country_id;
     }
 
-    public Account(CountryService countryService) {
-        this.countryService = countryService;
-
-    }
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Account account = (Account) o;
-
-        if (enabled != account.enabled) return false;
-        if (account_id != null ? !account_id.equals(account.account_id) : account.account_id != null) return false;
-        if (!account_name.equals(account.account_name)) return false;
-        if (country_id != account.country_id) return false;
-        if (!emailAddress.equals(account.emailAddress)) return false;
-        if (!password.equals(account.password)) return false;
-        if (!phoneNumber.equals(account.phoneNumber)) return false;
-
-        return true;
-    }
-
     public Account() {
         this.account_id = 0L;
         this.countryService = new CountryService();
@@ -107,17 +85,12 @@ public class Account {
     }
 
     public Account setCountry_id(long country_id) {
-        this.country_id =country_id;
+        this.country_id = country_id;
         return this;
     }
 
     public long getCountry_id() {
         return country_id;
-    }
-
-    public Country getCountry() {
-
-        return countryService.get(this.country_id);
     }
 
     public String getConfirmPassword() {
@@ -127,5 +100,36 @@ public class Account {
     public Account setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
         return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Account account = (Account) o;
+
+        if (enabled != account.enabled) return false;
+        if (account_id != null ? !account_id.equals(account.account_id) : account.account_id != null) return false;
+        if (!account_name.equals(account.account_name)) return false;
+        if (country_id != account.country_id) return false;
+        if (!emailAddress.equals(account.emailAddress)) return false;
+        if (!password.equals(account.password)) return false;
+        if (!phoneNumber.equals(account.phoneNumber)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = countryService != null ? countryService.hashCode() : 0;
+        result = 31 * result + (account_id != null ? account_id.hashCode() : 0);
+        result = 31 * result + (account_name != null ? account_name.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (enabled ? 1 : 0);
+        result = 31 * result + (emailAddress != null ? emailAddress.hashCode() : 0);
+        result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
+        result = 31 * result + (int) (country_id ^ (country_id >>> 32));
+        return result;
     }
 }

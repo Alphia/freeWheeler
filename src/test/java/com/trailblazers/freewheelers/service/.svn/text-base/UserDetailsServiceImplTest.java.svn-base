@@ -2,7 +2,7 @@ package com.trailblazers.freewheelers.service;
 
 import com.trailblazers.freewheelers.mappers.AccountMapper;
 import com.trailblazers.freewheelers.model.Account;
-import com.trailblazers.freewheelers.service.UserDetailsServiceImpl;
+import com.trailblazers.freewheelers.model.AccountRole;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +13,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.ArrayList;
 
-import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 import static org.mockito.MockitoAnnotations.initMocks;
@@ -26,31 +25,34 @@ public class UserDetailsServiceImplTest {
     private Account account;
 
     @Mock
-    SqlSession sqlSession;
+    private AccountService accountService;
 
     @Mock
     AccountMapper accountMapper;
     private final String ACCOUNT_NAME = "Ralph";
     private final String ACCOUNT_PASSWORD = "H3!!o123";
+    private final String ACCOUNT_ROLE = "ROLE_USER";
     private UserDetailsService userDetailsService;
 
     @Before
     public void setUp() throws Exception {
         initMocks(this);
-        when(sqlSession.getMapper(AccountMapper.class)).thenReturn(accountMapper);
 
         this.account = new Account();
         account.setAccount_name(ACCOUNT_NAME);
         account.setPassword(ACCOUNT_PASSWORD);
 
-        this.userDetailsService = new UserDetailsServiceImpl(sqlSession);
+        when(accountService.getAccountByName(ACCOUNT_NAME)).thenReturn(account);
+        when(accountService.getAccountRoleFor(account)).thenReturn(new AccountRole(ACCOUNT_NAME, ACCOUNT_ROLE));
+
+        this.userDetailsService = new UserDetailsServiceImpl(accountService);
     }
 
     @Test
     public void shouldPullAccountBasedOnAccountName(){
         userDetailsService.loadUserByUsername(ACCOUNT_NAME);
 
-        verify(accountMapper, times(1)).getByName(ACCOUNT_NAME);
+        verify(accountService, times(1)).getAccountByName(ACCOUNT_NAME);
     }
 
     @Test
@@ -72,6 +74,4 @@ public class UserDetailsServiceImplTest {
 
         assertEquals(authorities.get(0).getAuthority(), "ROLE_USER");
     }
-
-
 }

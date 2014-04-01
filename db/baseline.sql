@@ -1,7 +1,7 @@
 CREATE TABLE country
 (
       country_id SERIAL PRIMARY KEY,
-      country_name character varying(255) NOT NULL
+      country_name character varying(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE shopping_cart
@@ -20,7 +20,8 @@ CREATE TABLE item
        name character varying(255) NOT NULL,
        price numeric(19,2) NOT NULL,
        type character varying(255) NOT NULL,
-       quantity bigint NOT NULL
+       quantity bigint NOT NULL,
+       image bytea
  );
 
 CREATE TABLE item_type
@@ -53,8 +54,8 @@ CREATE TABLE reserve_order
         order_id SERIAL PRIMARY KEY,
         account_id bigint NOT NULL,
         item_id bigint NOT NULL,
-	status character varying(255) NOT NULL,
-	note character varying(255) NOT NULL,
+	    status character varying(255) NOT NULL,
+	    note character varying(255) NOT NULL,
         reservation_timestamp timestamp without time zone NOT NULL,
         quantity int
 );
@@ -78,7 +79,6 @@ insert into account_role (account_name, role) values ('UserCat', 'ROLE_USER');
 insert into item_type (name) values ('Frames');
 insert into item_type (name) values ('Accessories');
 
-  
 insert into country(country_name) values ('UK');
 insert into country(country_name) values ('USA');
 insert into country(country_name) values ('France');

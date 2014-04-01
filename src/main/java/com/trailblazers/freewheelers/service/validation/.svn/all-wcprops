@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/twu36proj3/!svn/ver/429/trunk/src/main/java/com/trailblazers/freewheelers/service/validation
+END
+AccountValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/twu36proj3/!svn/ver/429/trunk/src/main/java/com/trailblazers/freewheelers/service/validation/AccountValidation.java
+END
+PasswordValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/twu36proj3/!svn/ver/429/trunk/src/main/java/com/trailblazers/freewheelers/service/validation/PasswordValidator.java
+END
+ItemValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/twu36proj3/!svn/ver/427/trunk/src/main/java/com/trailblazers/freewheelers/service/validation/ItemValidation.java
+END
