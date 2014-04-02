@@ -30,15 +30,17 @@ public class ReserveController {
     private final TaxCalculatorService taxCalculatorService;
 
     private ShoppingCartItem shoppingItem;
+    private AddressService addressService;
 
     @Autowired
     public ReserveController(ItemService itemService, AccountService accountService,
                              ReserveOrderService reserveOrderService,
-                             TaxCalculatorService taxCalculatorService) {
+                             TaxCalculatorService taxCalculatorService, AddressService addressService) {
         this.itemService = itemService;
         this.accountService = accountService;
         this.reserveOrderService = reserveOrderService;
         this.taxCalculatorService= taxCalculatorService;
+        this.addressService = addressService;
     }
 
     @RequestMapping(method = RequestMethod.POST, params = "shoppingCart=Reserve Item")

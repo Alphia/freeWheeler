@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="pageTitle" scope="request" value="Reserve Item"/>
 <%@ include file="header.jsp" %>
 
@@ -17,10 +18,35 @@
 
         }
         function calculateTotal() {
-            var price = document.getElementById("price").innerHTML;
-            var tax = document.getElementById("tax").innerHTML;
-            document.getElementById("total").innerHTML = (parseFloat(price) + parseFloat(tax)).toFixed(2);
-            document.getElementById("total1").innerHTML = (parseFloat(price) + parseFloat(tax)).toFixed(2);
+            if (${region=='OUTSIDE_EU'}) {
+
+                var price = document.getElementById("price").innerHTML;
+
+                document.getElementById("itemTotal").innerHTML = (parseFloat(price)).toFixed(2);
+                document.getElementById("total1").innerHTML = (parseFloat(price)).toFixed(2);
+
+            }
+            else {
+                var price = document.getElementById("price").innerHTML;
+                var tax = document.getElementById("tax").innerHTML;
+                document.getElementById("total").innerHTML = (parseFloat(price) + parseFloat(tax)).toFixed(2);
+                document.getElementById("itemTotal").innerHTML = (parseFloat(price) + parseFloat(tax)).toFixed(2);
+            }
+
+        }
+        function startLoading() {
+
+            if (${region=='OUTSIDE_EU'}) {
+                document.getElementById("price").innerHTML = (parseFloat(${shoppingCartItem.getItem().price})).toFixed(2);
+            }
+            else {
+                document.getElementById("tax").innerHTML = (parseFloat(${shoppingCartItem.getTax()})).toFixed(2);
+                document.getElementById("price").innerHTML = (parseFloat(${shoppingCartItem.getItem().price})).toFixed(2);
+            }
+
+
+            calculateTotal();
+
         }
     </script>
 </head>
@@ -42,7 +68,7 @@
             <td>${shoppingCartItem.getItem().name}</td>
             <td>${shoppingCartItem.getItem().price}</td>
             <td><label id="quantity" >${shoppingCartItem.getQuantity()}</label></td>
-            <td><label id="total1" onclick="calculateTotal()"></label></td>
+            <td><label id="itemTotal"></label></td>
 
         </tr>
 
@@ -56,29 +82,38 @@
 
         <tr>
             <td></td>
-        </tr>
-
-        <tr>
-            <td></td>
-            <td></td>
-            <td style="text-align: right">Total</td>
-            <td ><b><label id="price">${shoppingCartItem.getItem().price}</label></b></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td style="text-align: right">Taxes</td>
-            <td ><b><label id="tax">${shoppingCartItem.getTax()}</label></b></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td style="text-align: right">Total with taxes</td>
-            <td ><label id="total" style="padding-right: 100px; font: bolder"></label></td>
         </tr>
 
         </tbody>
     </table>
+        <table class="total total-design">
+            <tr>
+                <td width="90%" style="text-align: right">Total</td>
+                <td><b><label id="price">${shoppingCartItem.getItem().price}</label></b></td>
+            </tr>
+            <tr>
+                <c:if test="${region == 'UK'}">
+                    <td><span id="vat_percentage_message">VAT(20%) </span></td>
+                </c:if>
+                <c:if test="${region == 'EU_EXCEPT_UK'}">
+                    <td><span id="vat_exempt">VAT Exempt :</span></td>
+                </c:if>
+                <c:if test="${region != 'OUTSIDE_EU'}">
+                <td>
+                    <b><label id="tax">
+                        <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2"
+                                          value="${shoppingCartItem.getTax()}"/>
+                    </label></b>
+                </td>
+                    </c:if>
+            </tr>
+            <c:if test="${region != 'OUTSIDE_EU'}">
+                <tr>
+                    <td>Total with VAT </td>
+                    <td><b><label id="total"></label></b></td>
+                </tr>
+            </c:if>
+        </table>
 
     <div class="page-action">Delivery Address</div>
 
@@ -247,4 +282,5 @@
     </div>
 </form>
 </body>
+
 <%@ include file="footer.jsp" %>
